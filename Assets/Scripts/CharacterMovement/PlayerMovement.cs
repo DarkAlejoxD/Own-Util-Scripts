@@ -62,18 +62,18 @@ namespace CharacterMovement
             _verifyAnimator = new Verify<Animator>(this.transform);
         }
 
-        //private void OnEnable() //Prepared to Observer Pattern and an extern InputManager Script
-        //{
-        //    var input = ISingleton<InputManager>.GetInstance();
-        //    input.OnMove += OnMove;
-        //    input.OnSprint += OnSprint;
-        //}
-        //private void OnDisable() //Prepared to Observer Pattern and an extern InputManager Script
-        //{
-        //    var input = ISingleton<InputManager>.GetInstance();
-        //    input.OnMove -= OnMove;
-        //    input.OnSprint -= OnSprint;
-        //}
+        #region Observer/Subscriber //Edit or comment if don't use it
+        private void OnEnable() //Prepared to Observer Pattern and an extern InputManager Script
+        {            
+            InputManager.OnMove += OnMove;
+            InputManager.OnSprint += OnSprint;
+        }
+        private void OnDisable() //Prepared to Observer Pattern and an extern InputManager Script
+        {
+            InputManager.OnMove -= OnMove;
+            InputManager.OnSprint -= OnSprint;
+        }
+        #endregion
 
         private void Start()
         {
@@ -248,33 +248,6 @@ namespace CharacterMovement
                 _velocityY = 0;
             }
         }
-        #endregion
-
-        #region DEBUG
-#if UNITY_EDITOR
-        private Transform DEBUG_surrogate;
-        private const float DEBUG_height = 1.5f;
-
-        private void OnDrawGizmos()
-        {
-            DEBUG_DrawCone();
-        }
-
-        private void DEBUG_DrawCone()
-        {
-            if (_dataContainer != null)
-            {
-                if (!DEBUG_surrogate)
-                {
-                    DEBUG_surrogate = new GameObject("DEBUG_eyesPos").transform;
-                    DEBUG_surrogate.position = transform.position + Vector3.up * DEBUG_height;
-                    DEBUG_surrogate.rotation = transform.rotation;
-                    DEBUG_surrogate.SetParent(transform);
-                }
-                GizmosUtilities.DrawFOVCone(DEBUG_surrogate, Color.green, GameData.DEBUG_DrawCone);
-            }
-        }
-#endif
-        #endregion
+        #endregion        
     }
 }

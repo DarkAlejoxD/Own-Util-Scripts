@@ -1,0 +1,40 @@
+using UnityEngine;
+
+[RequireComponent(typeof(Transform))]
+public class #SCRIPTNAME# : MonoBehaviour
+{
+    [Header("References")]
+    [SerializeField] private GameObject _prefab;
+
+    [Header("Attributes")]
+    [SerializeField] private float _attribute;
+
+    #region Unity Logic
+
+
+
+    #endregion
+
+    #region Public Methods
+
+
+
+    #endregion
+
+    #region Private Methods
+
+
+
+    #endregion
+
+#if UNITY_EDITOR
+    #region DEBUG
+
+    private void OnDrawGizmos()
+    {
+        
+    }
+
+    #endregion
+#endif
+}

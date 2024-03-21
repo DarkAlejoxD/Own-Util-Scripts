@@ -1,0 +1,19 @@
+using DialogueSystem;
+using UnityEngine;
+
+[CreateAssetMenu(fileName ="New #SCRIPTNAME# Action", menuName = "DialogueSystem/EndNodeActions/new #SCRIPTNAME#"")]
+public class #SCRIPTNAME# : DialogueEndActionObject
+{
+    //Delete all the comments when you finished
+    //private GameManager Manager => GameManager.GetGameManager();
+    /*
+     Demand the variables you need if any
+     */
+
+    public override void OnDialogueEnd()
+    {
+        /*
+         - Create here your logic if you wanna activate or make an action after the dialogue ends
+         */
+    }
+}

@@ -1,0 +1,21 @@
+using DialogueSystem;
+using UnityEngine;
+
+[CreateAssetMenu(fileName = "New #SCRIPTNAME# Condition", menuName = "DialogueSystem/Conditions/new #SCRIPTNAME#", order = 1)]
+public class #SCRIPTNAME# : DialogueConditionObject
+{
+    //Delete all the comments when you finished
+    //private GameManager Manager => GameManager.GetGameManager();
+    /*
+     - If MultiOption, put here the variables that will be showed in the inspector
+     */
+
+    public override bool DialogueCondition()
+    {
+        /*
+         Write here the condition logic
+         */
+
+        return true;
+    }
+}

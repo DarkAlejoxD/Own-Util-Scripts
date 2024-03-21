@@ -1,9 +1,22 @@
 using UnityEngine;
-//using UtilsComplements;
+using UtilsComplements;
 
 namespace CharacterMovement
 {
+    #region Report
     //Made by DarkAlejoxD, Camilo Londoño
+    //Last checked: March 2024
+    //Last modification: March 2024
+
+    //Commentaries:
+    //  -   Consider make an alternative script for Animations if there are a lot of animations
+    //      to control.
+    //  -   This scripts do not implement input-read. You should implement by yourself.
+    //      -   Consider using Observer Pattern where you use the private methods OnMove() and OnSprint().
+    //  -   If wanna calcultes the direction independent from the camera, calculate it by yourself and pass
+    //      pass the final direction through MoveNormalDT(direction) or MoveFixedDT(direction)                
+    #endregion
+
     /// <summary>
     /// Enough movement base in a 3D World
     /// </summary>
@@ -11,6 +24,9 @@ namespace CharacterMovement
     [RequireComponent(typeof(CharacterController), typeof(DataContainer))]
     public class PlayerMovement : MonoBehaviour
     {
+        //Change when you have an animator and a blend tree for movement
+        private const string ANIMATOR_SPEED_NAME = "Speed";
+
         [Header("References")]
         private DataContainer _dataContainer;
         private CharacterController _characterController;
@@ -20,12 +36,12 @@ namespace CharacterMovement
         private Vector3 _velocity = Vector3.zero;
         private float _velocityY;
 
-        private Animator _animator;
+        private Verify<Animator> _verifyAnimator;
 
         #region Attributes Getters
-        public Transform CurrentCamera => Camera.main.transform; 
-
+        public Transform CurrentCamera => Camera.main.transform;
         private GameValues GameData => _dataContainer.GameData;
+
         public Vector3 Velocity => _velocity;
         private float MinSpeedToMove => GameData.MinSpeedToMove;
         private float MaxSpeed => _isSprinting ? GameData.SprintSpeed : GameData.MaxSpeed;
@@ -33,6 +49,7 @@ namespace CharacterMovement
         private float LinealAcceleration => GameData.LinealAcceleration;
         private float LinealDeceleration => GameData.LinealDeceleration;
         private bool MoveByAcceleration => GameData.UseAccelerationMovement;
+
         private float Gravity => Physics.gravity.y;
         #endregion
 
@@ -42,9 +59,9 @@ namespace CharacterMovement
         {
             _dataContainer = GetComponent<DataContainer>();
             _characterController = GetComponent<CharacterController>();
-            //_cameraManager = ISingleton<CameraManager>.GetInstance();
-            _animator = GetComponentInChildren<Animator>();
+            _verifyAnimator = new Verify<Animator>(this.transform);
         }
+
         //private void OnEnable() //Prepared to Observer Pattern and an extern InputManager Script
         //{
         //    var input = ISingleton<InputManager>.GetInstance();
@@ -67,19 +84,17 @@ namespace CharacterMovement
         {
             GravityUpdate(); //Comment this if another script controls gravity
             DescelerateUpdate();
-            UpdateAnimation();
+            if (_verifyAnimator.Valid) UpdateAnimation();
         }
 
         private void UpdateAnimation()
         {
-            if (_animator.GetBool("isFishing")) return;
-            if (_animator.GetBool("isDrumming")) return;
-            if (_animator.GetBool("isBoarding")) return;
+            Animator animator = _verifyAnimator.Value;
 
             float animValue = 0;
             if (_velocity.magnitude < MinSpeedToMove)
             {
-                _animator.SetFloat("Speed", animValue);
+                animator.SetFloat(ANIMATOR_SPEED_NAME, animValue);
                 return;
             }
 
@@ -87,12 +102,16 @@ namespace CharacterMovement
             float maxSpeed = MaxSpeed - MinSpeedToMove;
             animValue = magnitude / maxSpeed;
 
-            _animator.SetFloat("Speed", Mathf.Clamp01(animValue));
+            animator.SetFloat(ANIMATOR_SPEED_NAME, Mathf.Clamp01(animValue));
         }
         #endregion
 
         #region Public Methods
 
+        /// <summary>
+        /// Moves player toward a direction.
+        /// </summary>
+        /// <param name="motion"> the direction the player should move.</param>
         public void MoveFixedDT(Vector3 motion)
         {
             float dt = Time.fixedDeltaTime;
@@ -102,6 +121,10 @@ namespace CharacterMovement
                 LinearMovement(motion, dt);
         }
 
+        /// <summary>
+        /// Moves player toward a direction.
+        /// </summary>
+        /// <param name="motion"> the direction the player should move.</param>
         public void MoveNormalDT(Vector3 motion)
         {
             float dt = Time.deltaTime;
@@ -127,10 +150,20 @@ namespace CharacterMovement
             return right;
         }
 
+        public void SetSprintValue(bool value)
+        {
+            OnSprint(value);
+        }
+
         #endregion
 
         #region Private Methods
 
+        /// <summary>
+        /// All-in-One method that calculates the relative direction of the Main Camera and executes
+        /// motion.
+        /// </summary>
+        /// <param name="input"></param>
         private void OnMove(Vector2 input) //Where x is <> and y ^v^
         {
             Vector3 forward = CalculateForward();
@@ -150,7 +183,7 @@ namespace CharacterMovement
             if (movement.magnitude > 1)
                 movement.Normalize();
 
-            MoveFixedDT(movement);
+            MoveNormalDT(movement);
         }
 
         private void LinearMovement(Vector3 movement, float dt) //MRU
@@ -167,7 +200,6 @@ namespace CharacterMovement
 
         private void LinearAcceleratedMovement(Vector3 movement, float dt) //MRUA
         {
-            //Calculate Deceleration First
             Vector3 motion;
 
             //Calculates acceleration
@@ -216,6 +248,33 @@ namespace CharacterMovement
                 _velocityY = 0;
             }
         }
+        #endregion
+
+        #region DEBUG
+#if UNITY_EDITOR
+        private Transform DEBUG_surrogate;
+        private const float DEBUG_height = 1.5f;
+
+        private void OnDrawGizmos()
+        {
+            DEBUG_DrawCone();
+        }
+
+        private void DEBUG_DrawCone()
+        {
+            if (_dataContainer != null)
+            {
+                if (!DEBUG_surrogate)
+                {
+                    DEBUG_surrogate = new GameObject("DEBUG_eyesPos").transform;
+                    DEBUG_surrogate.position = transform.position + Vector3.up * DEBUG_height;
+                    DEBUG_surrogate.rotation = transform.rotation;
+                    DEBUG_surrogate.SetParent(transform);
+                }
+                GizmosUtilities.DrawFOVCone(DEBUG_surrogate, Color.green, GameData.DEBUG_DrawCone);
+            }
+        }
+#endif
         #endregion
     }
 }

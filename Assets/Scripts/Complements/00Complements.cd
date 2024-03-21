@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="UtilsComplements.Cheat">
+    <Position X="1.75" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAABAAAABAAAAAAAEAAAAAAAAAAQAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Complements\Cheat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UtilsComplements.ResetGameCheat">
+    <Position X="0.5" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAEAAAAAAAAAAAAEAAAAAAAAAAQQAAgAAgAAEA=</HashCode>
+      <FileName>Assets\Scripts\Complements\ResetGameCheat.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="UtilsComplements.TimeScaleControllerCheat">
+    <Position X="3" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAEACBAAAAAAAAAEAAAACAQAEAQQAAkAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Complements\TimeScaleControllerCheat.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="UtilsComplements.State">
+    <Position X="10.5" Y="5.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAQAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Complements\FSM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UtilsComplements.FSM&lt;T&gt;">
+    <Position X="9" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAABAABAAAAACAAABIAAAAAAAAAFAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Complements\FSM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UtilsComplements.FSM_Extended&lt;T&gt;">
+    <Position X="7.5" Y="5.25" Width="2.25" />
+    <InheritanceLine Type="UtilsComplements.FSM&lt;T&gt;" ManuallyRouted="true">
+      <Path>
+        <Point X="10.125" Y="4.911" />
+        <Point X="10.125" Y="5.146" />
+        <Point X="8.625" Y="5.146" />
+        <Point X="8.625" Y="5.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAgABAAACIAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Complements\FSM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UtilsComplements.GizmosUtilities">
+    <Position X="15" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAIAAAAAAAAAAAAQAAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Complements\GizmosUtilities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UtilsComplements.MathUtil">
+    <Position X="21" Y="5.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>CAAAIAAAAAAACAAAAAAAAAAAAAAAAAAAAEAAQAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Complements\MathUtil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UtilsComplements.Pool&lt;T&gt;">
+    <Position X="2" Y="10.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>gAAAAEAAAAABAAAEgACAAAgcAAAAAAEAAAAIEAAAAwA=</HashCode>
+      <FileName>Assets\Scripts\Complements\Pool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UtilsComplements.Timer">
+    <Position X="9" Y="10.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAYAAQAKAAACAAAEAhAAAAAABQBABAQAAAAAgAIIAAA=</HashCode>
+      <FileName>Assets\Scripts\Complements\Timer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UtilsComplements.UILookAtCamera">
+    <Position X="15" Y="10.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAACAAgEA=</HashCode>
+      <FileName>Assets\Scripts\Complements\UILookAtCamera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="UtilsComplements.InitialTransform">
+    <Position X="15" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAABAgAQAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Complements\InitialTransform.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="UtilsComplements.Verify&lt;T&gt;">
+    <Position X="15" Y="12.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgBAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Complements\Verify.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="UtilsComplements.ISingleton&lt;T&gt;">
+    <Position X="21" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAEAAAAAABQAAAEABAAAAAAAQAAkAAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Complements\ISingleton.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

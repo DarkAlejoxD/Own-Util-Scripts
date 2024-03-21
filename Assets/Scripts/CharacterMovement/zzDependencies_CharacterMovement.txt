@@ -1,0 +1,12 @@
+-	The folder/namespace depends on:
+	-	DarkAlejoxD Complements folder / UtilsComplements namespace.
+	-	"Foldout" by Giuliano Marinelli. (Included in Complements folder)
+
+-	Aditionally:
+	-	Input Manager class depends on the New Input System package.
+		(Last checked v1.7.0 in Unity 2022.3.16f1) if any compilation error or smtg, rewrite
+		InputManager class.
+
+If imported the whole folder, download the Input System, otherwise, you can create your own
+Input system. PlayerMovement.cs is meant to be flexible in both cases, that's why it don't
+implement any way of read input.

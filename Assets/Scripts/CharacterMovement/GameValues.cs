@@ -2,7 +2,12 @@ using UnityEngine;
 
 namespace CharacterMovement
 {
+    #region Report
     //Made by DarkAlejoxD, Camilo Londoño
+    //Last checked: March 2024
+    //Last modification: February 2024
+    #endregion
+
     /// <summary>
     /// Player/Game Blackboard, can create various and test different scenarios
     /// </summary>

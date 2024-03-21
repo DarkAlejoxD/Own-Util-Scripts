@@ -3,10 +3,6 @@ using System.Collections.Generic;
 
 namespace UtilsComplements
 {
-    /// <summary>
-    /// Easy Way to make Finite State Machine by enums
-    /// </summary>
-
     public class State
     {
         public Action OnEnter;
@@ -16,6 +12,14 @@ namespace UtilsComplements
         public Action OnExit;
     }
 
+    #region Report
+    //Last checked: March 2024
+    //Last modification: idk, maybe 2022
+    #endregion
+
+    /// <summary>
+    /// Easy Way to make Finite State Machine by enums
+    /// </summary>
     public class FSM<T> where T : Enum
     {
         public T CurrentState => ActualState;
@@ -67,6 +71,11 @@ namespace UtilsComplements
             States[state].OnExit = f;
         }
     }
+
+    #region Report
+    //Last checked: March 2024
+    //Last modification: idk, maybe 2023
+    #endregion
 
     /// <summary>
     /// Addition to an old Script to

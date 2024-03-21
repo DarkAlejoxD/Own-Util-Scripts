@@ -1,10 +1,20 @@
-//using DialogueSystem;
 using System;
 using UnityEngine;
+//using DialogueSystem;
 
 namespace UtilsComplements
 {
-    /// <summary> Allows play with the Time Scale, mantain in your code if you want to test in build </summary>
+    #region Report
+    //Last checked: February 2024
+    //Last modification: February 2024
+
+    //Commentaries:
+    //  -   Cheat class implementation
+    #endregion
+
+    /// <summary> 
+    /// Allows play with the Time Scale, mantain in your code if you want to test in build 
+    /// </summary>
     public class TimeScaleControllerCheat : Cheat, ISingleton<TimeScaleControllerCheat>
     {
         private const string TIME_CHEAT = "CONTROL";

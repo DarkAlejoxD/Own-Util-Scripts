@@ -4,6 +4,22 @@ using UnityEngine;
 
 namespace UtilsComplements
 {
+    #region Report
+    //Made by DarkAlejoxD, Camilo Londoño
+    //Last checked: November 2023
+    //Last modification: idk, probably September or smtg
+
+    //Commentaries:
+    //  -   Unknown how affects to performance or memory due to working with a pair of lists
+
+    //TODO: Profile this class and fix if any perfromance error.
+    //TODO: Check if pool works normally.
+    #endregion
+
+    /// <summary>
+    /// Pool of any Component
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class Pool<T> where T : Component
     {
         private readonly bool _catchObjectFromActiveList;

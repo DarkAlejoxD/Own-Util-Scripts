@@ -2,6 +2,14 @@ using UnityEngine;
 
 namespace UtilsComplements
 {
+    #region Report
+    //Last checked: February 2024
+    //Last modification: idk
+    #endregion
+
+    /// <summary>
+    /// Make a canvas in world space to look at the main Camera
+    /// </summary>
     [RequireComponent(typeof(Canvas))]
     public class UILookAtCamera : MonoBehaviour
     {

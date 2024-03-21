@@ -3,6 +3,23 @@ using UnityEngine;
 
 namespace UtilsComplements
 {
+    #region Report
+    //Last checked: idk
+    //Last modification: idk
+
+    //Commentaries:
+    //  -   Used to easy create timers in games. Is useful to implement a timer when you need to
+    //      control the _currentTime.
+    //  -   It's kinda messy when you need to initialize the class before using it and put the 
+    //      Update(dt) method in an Update() Monobehaviour class.
+    //  -   If some extern is reading this, i prefer to use coroutines if I want a puntual timer in
+    //      my games, and implement myself a timer if a need it, but you can use it anyway, that's 
+    //      why it is in this namespace, maybe it's useful for some spawner if you activate loop.
+    #endregion
+
+    /// <summary>
+    /// Easy create timers
+    /// </summary>
     public class Timer
     {
         private const int DEFAULT_TIME_TO_DIE = 5;
@@ -84,9 +101,9 @@ namespace UtilsComplements
             if (OnTime != null)
                 OnTime?.Invoke();
 
-            //if (_loop)
-            //    ResetTimer();
-            //else
+            if (_loop)
+                ResetTimer();
+            else
                 _hasFinished = true;
         }
 

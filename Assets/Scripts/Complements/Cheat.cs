@@ -2,12 +2,20 @@
 
 namespace UtilsComplements
 {
+    #region Report
+    //Made by DarkAlejoxD, Camilo Londoño
+    //Last checked: March 2024
+    //Last modification: March 2024
+    #endregion
+
     /// <summary> Allows create GTA San Andreas like cheats </summary>
     public abstract class Cheat : MonoBehaviour
     {
-        private int _cheatIndex = 0;
-        protected abstract string CHEAT_NAME { get; }
         protected bool _cheatActivated;
+
+        private int _cheatIndex = 0;
+        
+        protected abstract string CHEAT_NAME { get; }
         protected virtual bool DEBUG_debug => false;
 
         protected virtual void Awake()
@@ -20,26 +28,25 @@ namespace UtilsComplements
             if (_cheatActivated)
                 return;
 
-            if (Input.anyKeyDown)
+            if (!Input.anyKeyDown)
+                return;
+
+            string cheat = CHEAT_NAME;
+            char correctKey = cheat[_cheatIndex];
+            if (DEBUG_debug) Debug.Log(correctKey.ToString().ToLower());
+
+            if (Input.GetKeyDown(correctKey.ToString().ToLower()))
             {
-                string cheat = CHEAT_NAME;
-                char correctKey = cheat[_cheatIndex];
-                if (DEBUG_debug) Debug.Log(correctKey.ToString().ToLower());
-                if (Input.GetKeyDown(correctKey.ToString().ToLower()))
+                if (_cheatIndex == CHEAT_NAME.Length - 1)
                 {
-                    if (_cheatIndex == CHEAT_NAME.Length - 1)
-                    {
-                        OnCheat();
-                        _cheatActivated = true;
-                    }
-                    if (DEBUG_debug) Debug.Log("Correct key");
-                    _cheatIndex++;
+                    OnCheat();
+                    _cheatActivated = true;
                 }
-                else
-                {
-                    _cheatIndex = 0;
-                }
+                _cheatIndex++;
+
+                if (DEBUG_debug) Debug.Log("Correct key");
             }
+            else { _cheatIndex = 0; }
         }
 
         protected abstract void OnCheat();

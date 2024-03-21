@@ -4,6 +4,15 @@ using UnityEngine;
 
 namespace UtilsComplements
 {
+    #region Report
+    //Made by DarkAlejoxD, Camilo Londoño
+    //Last checked: March 2024
+    //Last modification: March 2024
+    #endregion
+
+    /// <summary>
+    /// Some shapes i often use to debug.
+    /// </summary>
     public static class GizmosUtilities
     {
 

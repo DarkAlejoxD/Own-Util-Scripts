@@ -4,6 +4,13 @@ namespace UtilsComplements
 {
     public static class MathUtil
     {
+        #region Report
+        //Last checked: idk, probably 2022
+        //Last modification: idk, probably 2022
+
+        //Commentary: Old class used in 2D projects
+        #endregion
+
         /// <summary>
         /// Returns an angle in radians
         /// </summary>

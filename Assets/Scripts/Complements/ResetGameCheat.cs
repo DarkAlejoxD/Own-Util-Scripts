@@ -1,7 +1,13 @@
-﻿using UtilsComplements;
-
-namespace UtilsComplements
+﻿namespace UtilsComplements
 {
+    #region Report
+    //Last checked: February 2024
+    //Last modification: February 2024
+
+    //Commentaries:
+    //  -   Cheat class implementation
+    #endregion
+
     public class ResetGameCheat : Cheat, ISingleton<ResetGameCheat>
     {
         private const string MENU_CHEAT = "GOTOMENU";
@@ -30,6 +36,7 @@ namespace UtilsComplements
 
         protected override void OnCheat()
         {
+            //Put here the command to go to your menu
             //MenuManager.GoToMainMenu();
         }
     }

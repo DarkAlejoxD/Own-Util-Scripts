@@ -1,9 +1,10 @@
 using System;
 using UnityEngine;
-using UtilsComplements;
 
-namespace CharacterMovement
+namespace InputManagerController
 {
+    #region MovementInputMain
+
     #region Report
     //Made by DarkAlejoxD, Camilo Londoño
 
@@ -26,48 +27,29 @@ namespace CharacterMovement
     /// <summary>
     /// Base/Template for an InputManager.
     /// </summary>
-    public class CharacterInputManager : MonoBehaviour, ISingleton<CharacterInputManager>
+    public partial class InputManager : MonoBehaviour
     {
         private enum MovementStyles
         {
             CLASIC, POINTNCLICK
         }
 
-        [Header("ActionReferences")]
-        [SerializeField] private PlayerMap _playerInput;
-
-        [Header("Attributes")]
+        [Header("Movement Attributes")]
         [SerializeField] private MovementStyles _movementStyles = MovementStyles.CLASIC;
         private bool _moveByInputs;
 
         [Header("Actions/Influencers")]
-        public static Action<Vector2> OnMove;
-        public static Action<bool> OnSprint;
+        public Action<Vector2> OnMove;
+        public Action<bool> OnSprint;
 
-        public static Action OnClick;
-        public static Action<bool> OnChange;
-
-        public ISingleton<CharacterInputManager> Instance => this;
-        public CharacterInputManager Value => this;
+        public Action OnClick;
+        public Action<bool> OnChange;
 
         #region Unity Logic
-        private void Awake()
-        {
-            Instance.Instantiate();
-
-            _playerInput = new PlayerMap();
-            _playerInput.Player.Enable();
-        }
-
-        private void Update()
+        partial void MovementUpdate()
         {
             Move();
             Sprint();
-        }
-
-        private void OnDestroy()
-        {
-            Instance.RemoveInstance();
         }
         #endregion
 
@@ -79,12 +61,16 @@ namespace CharacterMovement
         #endregion
 
         #region Private Methods
+
+        private partial Vector2 MovementInput();
+        private partial bool SprintInput();
+
         private void Move()
         {
             if (!_playerInput.Player.enabled)
                 return;
 
-            Vector2 movement = _playerInput.Player.Move.ReadValue<Vector2>();
+            Vector2 movement = MovementInput();
 
             if (_movementStyles == MovementStyles.POINTNCLICK)
             {
@@ -98,9 +84,55 @@ namespace CharacterMovement
 
         private void Sprint()
         {
-            bool buttonPressed = _playerInput.Player.Sprint.IsPressed();
+            bool buttonPressed = SprintInput();
             OnSprint?.Invoke(buttonPressed);
         }
         #endregion
     }
+    #endregion
+
+    #region InputChose / One of both has to be uncommented
+
+    #region By New Input System
+
+    public partial class InputManager
+    {
+        private partial Vector2 MovementInput() => _playerInput.Player.Move.ReadValue<Vector2>();
+        private partial bool SprintInput() => _playerInput.Player.Sprint.IsPressed();
+    }
+
+    #endregion
+
+    #region By Old Input System
+    /*
+    public partial class InputManager
+    {
+        private const KeyCode upKey = KeyCode.W;
+        private const KeyCode downKey = KeyCode.S;
+        private const KeyCode rightKey = KeyCode.D;
+        private const KeyCode leftKey = KeyCode.A;
+
+        private const KeyCode sprintKey = KeyCode.LeftShift;
+
+        private partial Vector2 MovementInput()
+        {
+            Vector2 inputDir = Vector3.zero;
+
+            if (Input.GetKey(upKey)) inputDir = Vector2.up;
+
+            if (Input.GetKey(downKey)) inputDir -= Vector2.up;
+
+            if (Input.GetKey(rightKey)) inputDir += Vector2.right;
+
+            if (Input.GetKey(leftKey)) inputDir -= Vector2.right;
+
+            return inputDir.normalized;
+        }
+
+        private partial bool SprintInput() => Input.GetKey(sprintKey);
+    }
+    */
+    #endregion
+
+    #endregion
 }

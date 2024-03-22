@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using InputManagerController;
 
 namespace CharacterMovement
 {
@@ -6,29 +7,37 @@ namespace CharacterMovement
     //Made by DarkAlejoxD, Camilo Londoño
 
     //Partial Role: Branch/Addon
-    //Current State: WIP
+    //Current State: PartialEnd
     //Last checked: March 2024
     //Last modification: March 2024
 
     //Direct dependencies of classes if imported file by file:
     //  -   PlayerMovement.cs
+    //  -   (Optional) InputManager.cs
+    //      -   Optional becasue you can create a new InputManager from scratch and rewrite
+    //          OnEnable/OnDisable functions
 
     //Commentaries:
     //  -   Subscribe to the Input Manager if Any
     #endregion
 
     //This part of the class' task is to subscribe to the InputManager
+    [RequireComponent(typeof(InputManager))]
     public partial class PlayerMovement : MonoBehaviour
     {
-        partial void OnEnable() //Prepared to Observer Pattern and an extern InputManager Script
+        partial void OnSubscribeInputManager() //Prepared to Observer Pattern and an extern InputManager Script
         {
-            CharacterInputManager.OnMove += OnMove;
-            CharacterInputManager.OnSprint += OnSprint;
+            InputManager inputManager = GetComponent<InputManager>();
+
+            inputManager.OnMove += OnMove;
+            inputManager.OnSprint += OnSprint;
         }
-        partial void OnDisable() //Prepared to Observer Pattern and an extern InputManager Script
+        partial void OnUnsubscribeInputManager() //Prepared to Observer Pattern and an extern InputManager Script
         {
-            CharacterInputManager.OnMove -= OnMove;
-            CharacterInputManager.OnSprint -= OnSprint;
+            InputManager inputManager = GetComponent<InputManager>();
+
+            inputManager.OnMove -= OnMove;
+            inputManager.OnSprint -= OnSprint;
         }
     }
 }

@@ -80,9 +80,19 @@ namespace CharacterMovement
         //Meant to be in other script, but don't delete, or edit by your own risk fixing all the issues
         //Check the PlayerMovement_AddonSubscription.cs
         #region Observer/Subscriber
-        partial void OnEnable();
-        partial void OnDisable();
+        partial void OnSubscribeInputManager();
+        partial void OnUnsubscribeInputManager();
         #endregion
+
+        private void OnEnable()
+        {
+            OnSubscribeInputManager();
+        }
+
+        private void OnDisable()
+        {
+            OnUnsubscribeInputManager();
+        }
 
         private void Start()
         {

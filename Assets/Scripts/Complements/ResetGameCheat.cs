@@ -4,6 +4,10 @@
     //Last checked: February 2024
     //Last modification: February 2024
 
+    //Direct dependencies of classes if imported file by file:
+    //  -   Cheat.cs
+    //  -   ISingleton<T>.cs
+
     //Commentaries:
     //  -   Cheat class implementation
     #endregion

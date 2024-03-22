@@ -5,24 +5,39 @@ namespace CharacterMovement
 {
     #region Report
     //Made by DarkAlejoxD, Camilo Londoño
+
+    //Partial Role: Main
+    //Current State: PartialEnd
     //Last checked: March 2024
     //Last modification: March 2024
 
+    //Direct dependencies of classes if imported file by file:
+    //  -   GameValues.cs
+    //  -   DataContainer.cs
+    //  -   UtilsComplements.Verify<T>.cs
+    //  -   (Optional) PlayerMovement_AddonSubscription.cs //It's not a dependency, but helps to declare a
+    //      subscription to a InputManager if any.
+
     //Commentaries:
     //  -   Consider make an alternative script for Animations if there are a lot of animations
-    //      to control.
+    //      to control.???
     //  -   This scripts do not implement input-read. You should implement by yourself.
     //      -   Consider using Observer Pattern where you use the private methods OnMove() and OnSprint().
+    //      -   Also consider doing it in another file to mantain this file only for the logic of the movement.
+    //          (Partial)
+    //          -   You can use PlayerMovement_AddonSubscription.cs
     //  -   If wanna calcultes the direction independent from the camera, calculate it by yourself and pass
-    //      pass the final direction through MoveNormalDT(direction) or MoveFixedDT(direction)                
+    //      pass the final direction through MoveNormalDT(direction) or MoveFixedDT(direction)
+    //  -   Partial Modifier is a test, it should not give any problems because when the program is compiled, it
+    //      will mix all the parts of the class.
     #endregion
 
     /// <summary>
-    /// Enough movement base in a 3D World
+    /// Enough movement base in a 3D World, independent of the type of the Camera
     /// </summary>
     [SelectionBase]
     [RequireComponent(typeof(CharacterController), typeof(DataContainer))]
-    public class PlayerMovement : MonoBehaviour
+    public partial class PlayerMovement : MonoBehaviour
     {
         //Change when you have an animator and a blend tree for movement
         private const string ANIMATOR_SPEED_NAME = "Speed";
@@ -62,17 +77,11 @@ namespace CharacterMovement
             _verifyAnimator = new Verify<Animator>(this.transform);
         }
 
-        #region Observer/Subscriber //Edit or comment if don't use it
-        private void OnEnable() //Prepared to Observer Pattern and an extern InputManager Script
-        {            
-            InputManager.OnMove += OnMove;
-            InputManager.OnSprint += OnSprint;
-        }
-        private void OnDisable() //Prepared to Observer Pattern and an extern InputManager Script
-        {
-            InputManager.OnMove -= OnMove;
-            InputManager.OnSprint -= OnSprint;
-        }
+        //Meant to be in other script, but don't delete, or edit by your own risk fixing all the issues
+        //Check the PlayerMovement_AddonSubscription.cs
+        #region Observer/Subscriber
+        partial void OnEnable();
+        partial void OnDisable();
         #endregion
 
         private void Start()

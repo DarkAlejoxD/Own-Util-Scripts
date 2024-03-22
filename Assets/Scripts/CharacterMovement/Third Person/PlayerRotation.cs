@@ -1,12 +1,17 @@
 using UnityEngine;
 using UtilsComplements;
 
-namespace CharacterMovement
+namespace CharacterMovement.ThirdPerson
 {
     #region Report
     //Made by DarkAlejoxD, Camilo Londoño
+
     //Last checked: March 2024
-    //Last modification: March 2024            
+    //Last modification: March 2024
+
+    //Direct dependencies of classes if imported file by file:
+    //  -   PlayerMovement.cs
+    //  -   UtilsComplements.GizmosUtilities.cs (If don't want, delete "DEBUG" region)
     #endregion
 
     /// <summary>

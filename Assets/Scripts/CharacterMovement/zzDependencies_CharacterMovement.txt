@@ -10,3 +10,11 @@
 If imported the whole folder, download the Input System, otherwise, you can create your own
 Input system. PlayerMovement.cs is meant to be flexible in both cases, that's why it don't
 implement any way of read input.
+
+
+ -	TODO:
+	-	Jump behaviour
+		-	Consider rewrite a new one instead of import of the Mario project
+		-	Different behaviour for First Person/Third Person?
+	-	Import PointnClick from Atka
+	-	¿Import FPS Head movement by Marti Garriga?

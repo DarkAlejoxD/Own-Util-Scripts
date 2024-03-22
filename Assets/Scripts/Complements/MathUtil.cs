@@ -5,6 +5,8 @@ namespace UtilsComplements
     public static class MathUtil
     {
         #region Report
+        //Made by DarkAlejoxD, Camilo Londoño
+
         //Last checked: idk, probably 2022
         //Last modification: idk, probably 2022
 

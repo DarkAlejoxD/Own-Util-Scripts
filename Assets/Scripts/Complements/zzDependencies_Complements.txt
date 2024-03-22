@@ -1,4 +1,9 @@
-- This folder/namespace should contain all its own dependencies.
-- If exported file by file, some classes probably uses some other scripts from the namespace.
-- The folder contains also an extern tool to easy organize fields in Inspector --> 
-	"Foldout" by Giuliano Marinelli
+	-	This folder/namespace should contain all its own dependencies.
+	-	If exported file by file, some classes probably uses some other scripts from the namespace.
+	-	The folder contains also an extern tool to easy organize fields in Inspector --> 
+		"Foldout" by Giuliano Marinelli
+
+
+TODO:
+	-	SoundManager
+		-	Consider import Alex Morillas'/Skfod's SoundManager?? 

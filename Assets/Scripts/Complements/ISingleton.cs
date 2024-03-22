@@ -4,6 +4,7 @@ namespace UtilsComplements
 {
     #region Report
     //Made by DarkAlejoxD, Camilo Londoño
+
     //Last checked: March 2024, (Currently used by most of my singleton classes)
     //Last modification: February 2024
 

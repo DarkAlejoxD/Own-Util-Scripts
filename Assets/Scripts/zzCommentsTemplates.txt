@@ -1,0 +1,38 @@
+Dependencies Text
+-------------------------------
+	-	Text 1
+	-	Text 2
+
+
+TODO:
+	-	Task 1
+-------------------------------
+
+
+Report Text
+-------------------------------
+    #region Report
+    //Made by {Author}
+    //Ft. {OtherAuthor1}, {OtherAuthor2}
+
+    //Partial Role: {Main/('Branch/Addon')}
+    //Current State: {WIP/Sealed/PartialWIP/PartialEnd/Finished}
+    //  -   WIP: Work In Progress, probably will never be here.
+    //  -   Sealed: The class is ended, you shouldn't add/delete more, only if necessary.
+    //  -   PartialWIP: WIP but with partial classes, idk.
+    //  -   PartialEnd: Meant to be for the part of the partial part that you should not edit, unless it's necessary.
+    //  -   Finished: It's editable and extensible.
+    //Last checked: {Date}
+    //Last modification: {Date}
+
+    //Direct dependencies of classes if imported file by file:
+    //  -   {Package Name} package
+    //  -   Class.cs
+
+    //Commentaries:
+    //  -   Comment 1
+
+    //TODO: 
+    //  -   Task 1
+    #endregion
+-------------------------------

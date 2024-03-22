@@ -96,6 +96,9 @@ GameObject:
   - component: {fileID: 2000682859516842513}
   - component: {fileID: 6142884712854625719}
   - component: {fileID: 1186114713936237385}
+  - component: {fileID: 2531708462089998517}
+  - component: {fileID: 8598189818724974543}
+  - component: {fileID: 8111582924981611310}
   m_Layer: 0
   m_Name: PlayerSample
   m_TagString: Untagged
@@ -180,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 263a334e90a084e4d99872de95bf0d72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameData: {fileID: 0}
+  _gameData: {fileID: 11400000, guid: 84b9d692133ecc846bb1569469ca8398, type: 2}
 --- !u!114 &1186114713936237385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,3 +196,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff47ca96116bee84d9574d8770dffaf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2531708462089998517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7737000150544414238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 506979115f7e7a04e9920b98894116b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _movementStyles: 0
+--- !u!114 &8598189818724974543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7737000150544414238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21c1a6aea1a0a044387560e863657996, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8111582924981611310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7737000150544414238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a28bc20bc9a41745be4643508762f83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _value: 10
+  _speed: 5
+  _prefab: {fileID: 7737000150544414238}
+  _surrogate: {fileID: 0}

@@ -1,0 +1,23 @@
+-	The folder/namespace depends on:
+	-	Character Movement Folder
+		-	This is an Extension for the CharacterMovement Folder, so it depends Directly from there
+	-	InputManagerBase
+		-	This extension adds the funcionality of the Inputs related to the Movement to the InputManager Class,
+			so Depends also from InputManagerBase.
+
+-	Aditionally:
+	-	Input Manager class depends on the New Input System package.
+		(Last checked v1.7.0 in Unity 2022.3.16f1) if any compilation error or smtg, rewrite
+		InputManager class.
+
+If imported the whole folder, download the Input System, otherwise, you can create your own
+Input system. PlayerMovement.cs is meant to be flexible in both cases, that's why it don't
+implement any way of read input.
+
+
+ -	TODO:
+	-	Jump behaviour
+		-	Consider rewrite a new one instead of import of the Mario project
+		-	Different behaviour for First Person/Third Person?
+	-	Import PointnClick from Atka
+	-	¿Import FPS Head movement by Marti Garriga?

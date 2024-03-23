@@ -15,7 +15,7 @@ Report Text
     //Made by {Author}
     //Ft. {OtherAuthor1}, {OtherAuthor2}
 
-    //Partial Role: {Main/('Branch/Addon')}
+    //Partial Role: {Main/('Branch/Extension')}
     //Current State: {WIP/Sealed/PartialWIP/PartialEnd/Finished}
     //  -   WIP: Work In Progress, probably will never be here.
     //  -   Sealed: The class is ended, you shouldn't add/delete more, only if necessary.

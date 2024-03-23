@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 338ca437b9645bc4aabc5614f60bb206, type: 3}
-  m_Name: DataSample
+  m_Name: Camera_DataSample
   m_EditorClassIdentifier: 
   _minSpeedToMove: 2
   _maxSpeed: 10

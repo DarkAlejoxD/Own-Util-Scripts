@@ -10,7 +10,7 @@
       <Method Name="Start" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>AKQAAAAIAiIIRAABEAIECADIAAMEAEAJAAAAgAAMmkA=</HashCode>
+      <HashCode>AKQAAAAIAiIIRAABEAIECADIAAMEAMAJAgAAgAAMmkA=</HashCode>
       <FileName>Assets\Scripts\CharacterMovement\PlayerMovement.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -40,22 +40,7 @@
       <FileName>Assets\Scripts\CharacterMovement\GameValues.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="InputManager">
-    <Position X="11.25" Y="0.5" Width="2.5" />
-    <NestedTypes>
-      <Enum Name="InputManager.MovementStyles" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>Assets\Scripts\CharacterMovement\InputManager.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
-    <TypeIdentifier>
-      <HashCode>AASBAAAEAYAAAAAAAAAAAEACAAAAAAAAQAAgAAAIAUA=</HashCode>
-      <FileName>Assets\Scripts\CharacterMovement\InputManager.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="CharacterMovement.PlayerRotation">
+  <Class Name="CharacterMovement.ThirdPerson.PlayerRotation">
     <Position X="7" Y="3.25" Width="2.25" />
     <Members>
       <Method Name="Awake" Hidden="true" />
@@ -67,7 +52,7 @@
     </Members>
     <TypeIdentifier>
       <HashCode>AgAEAAAAAgQAAIAAAAAAAQBgAAEAAAAAAAAAAAAUAEA=</HashCode>
-      <FileName>Assets\Scripts\CharacterMovement\PlayerRotation.cs</FileName>
+      <FileName>Assets\Scripts\CharacterMovement\Third Person\PlayerRotation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

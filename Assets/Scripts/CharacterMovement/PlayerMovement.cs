@@ -15,19 +15,19 @@ namespace CharacterMovement
     //  -   GameValues.cs
     //  -   DataContainer.cs
     //  -   UtilsComplements.Verify<T>.cs
-    //  -   (Optional) PlayerMovement_AddonSubscription.cs //It's not a dependency, but helps to declare a
-    //      subscription to a InputManager if any.
+    //  -   (Optional) PlayerMovement_ExtensionSubscription.cs 
+    //      -   It's not a dependency, but helps to declare a subscription to an InputManager.
 
     //Commentaries:
     //  -   Consider make an alternative script for Animations if there are a lot of animations
     //      to control.???
     //  -   This scripts do not implement input-read. You should implement by yourself.
-    //      -   Consider using Observer Pattern where you use the private methods OnMove() and OnSprint().
+    //      -   Consider using Observer Pattern where you use the private methods OnMove(Vector2) and OnSprint(bool).
     //      -   Also consider doing it in another file to mantain this file only for the logic of the movement.
     //          (Partial)
-    //          -   You can use PlayerMovement_AddonSubscription.cs
-    //  -   If wanna calcultes the direction independent from the camera, calculate it by yourself and pass
-    //      pass the final direction through MoveNormalDT(direction) or MoveFixedDT(direction)
+    //          -   You can use PlayerMovement_ExtensionSubscription.cs
+    //  -   If wanna calculte the direction independent from the camera, calculate it by yourself and pass
+    //      the final direction through MoveNormalDT(direction) or MoveFixedDT(direction)
     //  -   Partial Modifier is a test, it should not give any problems because when the program is compiled, it
     //      will mix all the parts of the class.
     #endregion
@@ -39,27 +39,22 @@ namespace CharacterMovement
     [RequireComponent(typeof(CharacterController), typeof(DataContainer))]
     public partial class PlayerMovement : MonoBehaviour
     {
-        //Change when you have an animator and a blend tree for movement
-        private const string ANIMATOR_SPEED_NAME = "Speed";
-
         [Header("References")]
         private DataContainer _dataContainer;
         private CharacterController _characterController;
 
         [Header("Attributes")]
-        private bool _isSprinting = false;
         private Vector3 _velocity = Vector3.zero;
         private float _velocityY;
-
-        private Verify<Animator> _verifyAnimator;
 
         #region Attributes Getters
         public Transform CurrentCamera => Camera.main.transform;
         private GameValues GameData => _dataContainer.GameData;
 
+        public bool IsSprinting { get; private set; }
         public Vector3 Velocity => _velocity;
         private float MinSpeedToMove => GameData.MinSpeedToMove;
-        private float MaxSpeed => _isSprinting ? GameData.SprintSpeed : GameData.MaxSpeed;
+        private float MaxSpeed => IsSprinting ? GameData.SprintSpeed : GameData.MaxSpeed;
         private bool CanSprint => GameData.SprintEnabled;
         private float LinealAcceleration => GameData.LinealAcceleration;
         private float LinealDeceleration => GameData.LinealDeceleration;
@@ -74,7 +69,6 @@ namespace CharacterMovement
         {
             _dataContainer = GetComponent<DataContainer>();
             _characterController = GetComponent<CharacterController>();
-            _verifyAnimator = new Verify<Animator>(this.transform);
         }
 
         //Meant to be in other script, but don't delete, or edit by your own risk fixing all the issues
@@ -103,25 +97,6 @@ namespace CharacterMovement
         {
             GravityUpdate(); //Comment this if another script controls gravity
             DescelerateUpdate();
-            if (_verifyAnimator.Valid) UpdateAnimation();
-        }
-
-        private void UpdateAnimation()
-        {
-            Animator animator = _verifyAnimator.Value;
-
-            float animValue = 0;
-            if (_velocity.magnitude < MinSpeedToMove)
-            {
-                animator.SetFloat(ANIMATOR_SPEED_NAME, animValue);
-                return;
-            }
-
-            float magnitude = _velocity.magnitude - MinSpeedToMove;
-            float maxSpeed = MaxSpeed - MinSpeedToMove;
-            animValue = magnitude / maxSpeed;
-
-            animator.SetFloat(ANIMATOR_SPEED_NAME, Mathf.Clamp01(animValue));
         }
         #endregion
 
@@ -240,7 +215,7 @@ namespace CharacterMovement
         private void OnSprint(bool isSprint)
         {
             if (CanSprint)
-                _isSprinting = isSprint;
+                IsSprinting = isSprint;
         }
 
         private void DescelerateUpdate()

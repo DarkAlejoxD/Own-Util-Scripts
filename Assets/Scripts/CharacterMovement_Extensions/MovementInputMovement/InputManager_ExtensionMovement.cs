@@ -8,6 +8,7 @@ namespace InputManagerController
     #region Report
     //Made by DarkAlejoxD, Camilo Londoño
 
+    //Partial Role: Branch/Extension
     //Current State: WIP
     //Last checked: March 2024
     //Last modification: March 2024
@@ -15,18 +16,9 @@ namespace InputManagerController
     //Direct dependencies of classes if imported file by file:
     //  -   Input System package
     //  -   UtilsComplements.ISingleton<T>.cs
-
-    //Commentaries:
-    //  -   Original script had more inputs and methods implemented, but this class is meant to be a 
-    //      template.
-    //  -   This inputManager Depends on Input system package 1.7.0 in Unity 2022.3.16f1. If gives any
-    //      problem, consider rewrite it.
-    //  -   Meant to be for a Single Player Input based.
     #endregion
 
-    /// <summary>
-    /// Base/Template for an InputManager.
-    /// </summary>
+    //Part of the InputManager that implements the movement of the Player
     public partial class InputManager : MonoBehaviour
     {
         private enum MovementStyles
@@ -45,6 +37,13 @@ namespace InputManagerController
         public Action OnClick;
         public Action<bool> OnChange;
 
+        #region Partial Methods
+
+        private partial Vector2 MovementInput();
+        private partial bool SprintInput();
+
+        #endregion
+
         #region Unity Logic
         partial void MovementUpdate()
         {
@@ -60,10 +59,7 @@ namespace InputManagerController
         }
         #endregion
 
-        #region Private Methods
-
-        private partial Vector2 MovementInput();
-        private partial bool SprintInput();
+        #region Private Methods 
 
         private void Move()
         {
@@ -88,10 +84,11 @@ namespace InputManagerController
             OnSprint?.Invoke(buttonPressed);
         }
         #endregion
+
     }
     #endregion
 
-    #region InputChose / One of both has to be uncommented
+    #region InputChoose / One of both has to be uncommented
 
     #region By New Input System
 

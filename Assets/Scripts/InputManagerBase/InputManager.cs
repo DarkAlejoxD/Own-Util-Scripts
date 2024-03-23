@@ -3,6 +3,23 @@ using UtilsComplements;
 
 namespace InputManagerController
 {
+    #region Report
+    //Made by DarkAlejoxD, Camilo Londoño
+
+    //Partial Role: Main
+    //Current State: WIP
+    //Last checked: March 2024
+    //Last modification: March 2024
+
+    //Direct dependencies of classes if imported file by file:
+    //  -   UtilsComplements Folder -> UtilsComplements.ISIngleton<T>.cs
+    //      -   If don't want, delete SinglePlayer Region.
+    //  -   New Input System Package
+    //      -   If don't want, delete New Input System Map and rewrite the logic of the class and change
+    //          the input style of some Branches.
+    #endregion
+
+
     #region Initialize&Main
     public partial class InputManager : MonoBehaviour
     {
@@ -16,6 +33,7 @@ namespace InputManagerController
         private void Update()
         {
             MovementUpdate();
+            ThirdCameraAttatchedUpdate();            
         }
 
         private void OnDestroy()
@@ -30,6 +48,7 @@ namespace InputManagerController
         partial void InitializePlayerMap(); //Initialize PlayerScript 
 
         partial void MovementUpdate();
+        partial void ThirdCameraAttatchedUpdate();
         #endregion
     }
     #endregion

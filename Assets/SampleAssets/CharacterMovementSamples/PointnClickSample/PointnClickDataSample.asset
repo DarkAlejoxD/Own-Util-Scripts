@@ -28,8 +28,8 @@ MonoBehaviour:
   _pcPitchSpeed: 20
   _gamePadYawSpeed: 360
   _gamePadPitchSpeed: 360
-  _radiusToStop: 2
-  _radiusToSlowDown: 5
+  _radiusToStop: 0.92
+  _radiusToSlowDown: 3.21
   DEBUG_drawNextLocation: 1
   DEBUG_drawSlowDownDistance: 1
   DEBUG_drawStopDistance: 1

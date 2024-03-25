@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338ca437b9645bc4aabc5614f60bb206, type: 3}
+  m_Name: PointnClickDataSample
+  m_EditorClassIdentifier: 
+  _minSpeedToMove: 2
+  _maxSpeed: 5
+  _sprintMaxSpeed: 10
+  _linealAcceleration: 100
+  _linealDeceleration: 60
+  _useAcceleratedMovement: 1
+  _canSprint: 1
+  _rotationLerp: 0.1
+  DEBUG_drawCone: 1
+  _minPitch: -40
+  _maxPitch: 70
+  _pitchInversed: 1
+  _pcYawSpeed: 20
+  _pcPitchSpeed: 20
+  _gamePadYawSpeed: 360
+  _gamePadPitchSpeed: 360
+  _radiusToStop: 2
+  _radiusToSlowDown: 5
+  DEBUG_drawNextLocation: 1
+  DEBUG_drawSlowDownDistance: 1
+  DEBUG_drawStopDistance: 1

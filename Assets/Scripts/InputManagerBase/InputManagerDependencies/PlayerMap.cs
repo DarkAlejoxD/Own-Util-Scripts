@@ -44,6 +44,15 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""PointnClick"",
+                    ""type"": ""Button"",
+                    ""id"": ""55127824-573d-4dc2-90e4-aad60833ac98"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -145,6 +154,17 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""action"": ""Sprint"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""eb30fe60-bb36-4c50-ab2c-9f3b39c44c78"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""PointnClick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -222,6 +242,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
+        m_Player_PointnClick = m_Player.FindAction("PointnClick", throwIfNotFound: true);
         // ThirdCamera
         m_ThirdCamera = asset.FindActionMap("ThirdCamera", throwIfNotFound: true);
         m_ThirdCamera_MoveCamera = m_ThirdCamera.FindAction("MoveCamera", throwIfNotFound: true);
@@ -288,12 +309,14 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Sprint;
+    private readonly InputAction m_Player_PointnClick;
     public struct PlayerActions
     {
         private @PlayerMap m_Wrapper;
         public PlayerActions(@PlayerMap wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Sprint => m_Wrapper.m_Player_Sprint;
+        public InputAction @PointnClick => m_Wrapper.m_Player_PointnClick;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -309,6 +332,9 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
             @Sprint.started += instance.OnSprint;
             @Sprint.performed += instance.OnSprint;
             @Sprint.canceled += instance.OnSprint;
+            @PointnClick.started += instance.OnPointnClick;
+            @PointnClick.performed += instance.OnPointnClick;
+            @PointnClick.canceled += instance.OnPointnClick;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -319,6 +345,9 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
             @Sprint.started -= instance.OnSprint;
             @Sprint.performed -= instance.OnSprint;
             @Sprint.canceled -= instance.OnSprint;
+            @PointnClick.started -= instance.OnPointnClick;
+            @PointnClick.performed -= instance.OnPointnClick;
+            @PointnClick.canceled -= instance.OnPointnClick;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -404,6 +433,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnSprint(InputAction.CallbackContext context);
+        void OnPointnClick(InputAction.CallbackContext context);
     }
     public interface IThirdCameraActions
     {

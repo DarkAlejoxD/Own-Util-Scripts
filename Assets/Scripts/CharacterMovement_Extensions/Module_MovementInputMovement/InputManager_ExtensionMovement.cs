@@ -42,6 +42,9 @@ namespace InputManagerController
         private partial Vector2 MovementInput();
         private partial bool SprintInput();
 
+        partial void UpdateTypeOfInput();
+        partial void PointnClickUpdate();
+
         #endregion
 
         #region Unity Logic
@@ -49,6 +52,7 @@ namespace InputManagerController
         {
             Move();
             Sprint();
+            PointnClickUpdate();
         }
         #endregion
 
@@ -74,6 +78,7 @@ namespace InputManagerController
                     return;
 
                 _movementStyles = MovementStyles.CLASIC;
+                UpdateTypeOfInput();
             }
             OnMove?.Invoke(movement);
         }

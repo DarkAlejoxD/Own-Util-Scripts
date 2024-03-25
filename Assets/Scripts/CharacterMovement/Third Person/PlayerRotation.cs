@@ -24,6 +24,8 @@ namespace CharacterMovement.ThirdPerson
         private DataContainer _dataContainer;
         private PlayerMovement _playerMovement;
 
+        private float _currentAngularSpeed;
+
         private GameValues GameData => _dataContainer.GameData;
         private Vector3 Velocity => _playerMovement.Velocity;
         private float RotationLerp => GameData.RotationLerp;
@@ -33,6 +35,11 @@ namespace CharacterMovement.ThirdPerson
         {
             _dataContainer = GetComponent<DataContainer>();
             _playerMovement = GetComponent<PlayerMovement>();
+        }
+
+        private void Start()
+        {
+            _currentAngularSpeed = 0;
         }
 
         private void FixedUpdate()

@@ -229,6 +229,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -323,24 +324,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lookAt: {fileID: 1309144092}
-  _minPitch: -40
-  _maxPitch: 70
-  _pitchInversed: 1
-  _pcYawSpeed: 360
-  _pcPitchSpeed: 360
-  _gamePadYawSpeed: 360
-  _gamePadPitchSpeed: 360
   _avoidObstaclesMask:
     serializedVersion: 2
     m_Bits: 1
   _offsetAvoidObstacles: 0.1
-  _minDistance: 3
-  _maxDistance: 5
+  _minDistance: 4
+  _maxDistance: 6
   _inputManager: {fileID: 4678254889520476606}
-  _smoothToRecolocateQuick: 0.01
-  _smoothToRecolocateSlow: 0.001
-  _dotNearForward: 0.937
-  _timeBeingIdle: 1000000
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263a334e90a084e4d99872de95bf0d72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameData: {fileID: 11400000, guid: 7595bfd0583a2b643a2d027102a05bde, type: 2}
 --- !u!1 &1309144091
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,7 +436,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 4b44345b4ab12344fa7fb8779ab298c1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -525,6 +528,22 @@ PrefabInstance:
     - target: {fileID: 2603030923788367876, guid: 4b9e1d3c286b1374d8f77ad6779cee45, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6142884712854625719, guid: 4b9e1d3c286b1374d8f77ad6779cee45, type: 3}
+      propertyPath: _gameData
+      value: 
+      objectReference: {fileID: 11400000, guid: 7595bfd0583a2b643a2d027102a05bde, type: 2}
+    - target: {fileID: 6303526865233907301, guid: 4b9e1d3c286b1374d8f77ad6779cee45, type: 3}
+      propertyPath: _changeAnimSmooth
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6303526865233907301, guid: 4b9e1d3c286b1374d8f77ad6779cee45, type: 3}
+      propertyPath: _maxTimeToChangeAnimations
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6303526865233907301, guid: 4b9e1d3c286b1374d8f77ad6779cee45, type: 3}
+      propertyPath: _minTimeToChangeAnimations
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7737000150544414238, guid: 4b9e1d3c286b1374d8f77ad6779cee45, type: 3}
       propertyPath: m_Name

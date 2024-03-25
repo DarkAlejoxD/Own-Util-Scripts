@@ -7,13 +7,16 @@ namespace CharacterMovement
 
     //Last checked: March 2024
     //Last modification: February 2024
+
+    ////Direct dependencies of classes if imported file by file:
+    //  -   Foldout Utility (Included in Complements Folder)
     #endregion
 
     /// <summary>
     /// Player/Game Blackboard, can create various and test different scenarios
     /// </summary>
     [CreateAssetMenu(fileName = "New Game DataBase", menuName = "GameData/New Data Base", order = 0)]
-    public class GameValues : ScriptableObject
+    public partial class GameValues : ScriptableObject
     {
         private const bool DEFAULT_STYLED = true;
 
@@ -27,18 +30,10 @@ namespace CharacterMovement
         [SerializeField] private float _linealDeceleration = 10;
         [SerializeField] private bool _useAcceleratedMovement = true;
         [SerializeField] private bool _canSprint = true;
-        [SerializeField, Range(0, 1)] private float _rotationLerpValue;
+        [SerializeField, Range(0, 1)] private float _rotationLerp = 0.01f;
 
-        [Header("Automatic Movement")]
-        [SerializeField] private float _radiusToStop = 2;
-        [SerializeField] private float _radiusToSlowDown = 5;
-
-        [Foldout("Player DEBUG", styled = DEFAULT_STYLED)]
-        [SerializeField] private bool DEBUG_drawCone;
-        [SerializeField] private bool DEBUG_drawNextLocation;
-        [SerializeField] private bool DEBUG_drawSlowDownDistance;
-        [SerializeField] private bool DEBUG_drawStopDistance;
-        [SerializeField] private Gradient DEBUG_TestGradient;
+        [Header("Movement DEBUG")]
+        [SerializeField] private bool DEBUG_drawCone;        
 
         #region Player Properties
         public float MinSpeedToMove => _minSpeedToMove;
@@ -65,17 +60,31 @@ namespace CharacterMovement
             set { _linealAcceleration = value; }
         }
         public float LinealDeceleration => _linealDeceleration;
-        public float RotationLerp => _rotationLerpValue;
+        public float RotationLerp => _rotationLerp;
+        public bool DEBUG_DrawCone => DEBUG_drawCone;        
+        #endregion
+
+        #endregion
+    }
+
+    public partial class GameValues : ScriptableObject 
+    {
+        [Foldout("Player Auto Attributes (PointnClick)", styled = DEFAULT_STYLED)]
+        [Header("Automatic Movement")]
+        [SerializeField] private float _radiusToStop = 2;
+        [SerializeField] private float _radiusToSlowDown = 5;
+
+        [Header("PointnClick DEBUG")]
+        [SerializeField] private bool DEBUG_drawNextLocation;
+        [SerializeField] private bool DEBUG_drawSlowDownDistance;
+        [SerializeField] private bool DEBUG_drawStopDistance;
+
 
         public float RadiusToStop => _radiusToStop;
         public float RadiusToSlowDown => _radiusToSlowDown;
 
-        public bool DEBUG_DrawCone => DEBUG_drawCone;
         public bool DEBUG_DrawNextLocation => DEBUG_drawNextLocation;
         public bool DEBUG_DrawSlowDown => DEBUG_drawSlowDownDistance;
         public bool DEBUG_DrawStop => DEBUG_drawStopDistance;
-        #endregion
-
-        #endregion
     }
 }

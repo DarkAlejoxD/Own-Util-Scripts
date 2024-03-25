@@ -10,9 +10,7 @@ namespace InputManagerController
         public Action<Vector2> OnThirdCameraMove;
 
         #region Partial Methods
-
         private partial Vector2 GetThirdCameraInput();
-
         #endregion
 
         #region UnityLogic
@@ -26,21 +24,32 @@ namespace InputManagerController
     }
     #endregion
 
-    #region ChooseInputs
+    #region CHOOSE INPUTS, one has to be uncommented
 
+    #region Old Inputs
+    //public partial class InputManager : MonoBehaviour
+    //{
+    //    private partial Vector2 GetThirdCameraInput()
+    //    {
+    //        //Controlled by the mouse Only
+    //        float horizontalMovement = Input.GetAxis("Mouse X");
+    //        float verticalMovement = Input.GetAxis("Mouse Y");
+
+    //        return new(horizontalMovement, verticalMovement);
+    //    }
+    //}
+    #endregion
+
+    #region New Input System
     public partial class InputManager : MonoBehaviour
     {
         private partial Vector2 GetThirdCameraInput()
         {
-            //Controlled by the mouse Only
-            float horizontalMovement = Input.GetAxis("Mouse X");
-            float verticalMovement = Input.GetAxis("Mouse Y");
-
-            return new(horizontalMovement, verticalMovement);
+            Vector2 movement = _playerInput.ThirdCamera.MoveCamera.ReadValue<Vector2>();
+            return movement;
         }
     }
-
-    //TODO: ADD it to the Player Map
+    #endregion
 
     #endregion
 }

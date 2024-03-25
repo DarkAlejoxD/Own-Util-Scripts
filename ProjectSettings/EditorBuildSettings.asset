@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/SampleAssets/CharacterMovementSamples/ThirdCameraAttached/CameraSample.unity
+    guid: 6911f38b00c0ac440bb1277f0f4ae566
   m_configObjects: {}

@@ -14,14 +14,15 @@ namespace UtilsComplements
     /// <summary>
     /// Create Templates of scripts.
     /// </summary>
-    public class ScriptFromTemplate
+    public class ScriptFromTemplate_Base
     {
         private const string _pathToDarksTemplate = "Assets/Scripts/Complements/Editor/DarksTemplate.cs.txt";
         private const string _pathToMinigameTemplate = "Assets/Scripts/Complements/Editor/MinigameTemplate.cs.txt";
         private const string _pathToDialogueConditionTemplate = "Assets/Scripts/Complements/Editor/ConditionTemplate.cs.txt";
         private const string _pathToEndDialogueActionTemplate = "Assets/Scripts/Complements/Editor/ActionAfterEndNodeTemplate.cs.txt";
 
-        [MenuItem(itemName: "Assets/Create/C# Unity Darks Template", isValidateFunction: false, priority = 22)]
+
+        [MenuItem(itemName: "Assets/Create/ScriptTemplates/C# Unity Darks Template", isValidateFunction: false, priority = 22)]
         public static void CreateScriptFromTemplate_DarksTemplate()
         {
             ProjectWindowUtil.CreateScriptAssetFromTemplateFile(_pathToDarksTemplate, "newScript.cs");

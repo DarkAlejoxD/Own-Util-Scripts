@@ -33,7 +33,7 @@ namespace InputManagerController
         private void Update()
         {
             MovementUpdate();
-            ThirdCameraAttatchedUpdate();            
+            ThirdCameraAttatchedUpdate();
         }
 
         private void OnDestroy()
@@ -61,7 +61,20 @@ namespace InputManagerController
         partial void InitializePlayerMap()
         {
             _playerInput = new PlayerMap();
-            _playerInput.Player.Enable();
+            SetPlayerMapActive(true);
+            SetThirdCameraActive(true);
+        }
+
+        public void SetPlayerMapActive(bool state)
+        {
+            if (state) _playerInput.Player.Enable();
+            else _playerInput.Player.Disable();
+        }
+
+        public void SetThirdCameraActive(bool state)
+        {
+            if (state) _playerInput.ThirdCamera.Enable();
+            else _playerInput.ThirdCamera.Disable();
         }
     }
     #endregion

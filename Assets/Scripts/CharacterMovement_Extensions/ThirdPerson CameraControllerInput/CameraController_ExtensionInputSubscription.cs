@@ -21,7 +21,7 @@ namespace CharacterMovement.ThirdPerson.Attached
             if (!_inputManager)
                 return;
 
-            _inputManager.OnThirdCameraMove += RotationUpdate;
+            _inputManager.OnThirdCameraMove -= RotationUpdate;
         }
     }
 }

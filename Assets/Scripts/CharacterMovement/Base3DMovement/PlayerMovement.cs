@@ -1,5 +1,4 @@
 using UnityEngine;
-using UtilsComplements;
 
 namespace CharacterMovement
 {
@@ -32,51 +31,46 @@ namespace CharacterMovement
     //      will mix all the parts of the class.
     #endregion
 
+    #region Main
     /// <summary>
     /// Enough movement base in a 3D World, independent of the type of the Camera
     /// </summary>
     [SelectionBase]
-    [RequireComponent(typeof(CharacterController), typeof(DataContainer))]
+    [RequireComponent(typeof(CharacterController))]
     public partial class PlayerMovement : MonoBehaviour
     {
-        [Header("References")]
-        private DataContainer _dataContainer;
+        [Header("References")]        
         private CharacterController _characterController;
 
         [Header("Attributes")]
         private Vector3 _velocity = Vector3.zero;
         private float _velocityY;
 
-        #region Attributes Getters
         public Transform CurrentCamera => Camera.main.transform;
-        private GameValues GameData => _dataContainer.GameData;
-
         public bool IsSprinting { get; private set; }
-        public Vector3 Velocity => _velocity;
-        private float MinSpeedToMove => GameData.MinSpeedToMove;
-        private float MaxSpeed => IsSprinting ? GameData.SprintSpeed : GameData.MaxSpeed;
-        private bool CanSprint => GameData.SprintEnabled;
-        private float LinealAcceleration => GameData.LinealAcceleration;
-        private float LinealDeceleration => GameData.LinealDeceleration;
-        private bool MoveByAcceleration => GameData.UseAccelerationMovement;
-
+        public Vector3 Velocity => _velocity;        
         private float Gravity => Physics.gravity.y;
-        #endregion
 
-        #region Unity Logic
-
-        private void Awake()
-        {
-            _dataContainer = GetComponent<DataContainer>();
-            _characterController = GetComponent<CharacterController>();
-        }
-
+        #region Partial Mehods
         //Meant to be in other script, but don't delete, or edit by your own risk fixing all the issues
         //Check the PlayerMovement_AddonSubscription.cs
         #region Observer/Subscriber
         partial void OnSubscribeInputManager();
         partial void OnUnsubscribeInputManager();
         #endregion
+
+        //Can be active or not, check the end of this file (Test)
+        partial void GetDataContainer();
+
+        #endregion
+
+        #region Unity Logic
+
+        private void Awake()
+        {            
+            _characterController = GetComponent<CharacterController>();
+            GetDataContainer();
+        }
 
         private void OnEnable()
         {
@@ -244,4 +238,48 @@ namespace CharacterMovement
         }
         #endregion        
     }
+    #endregion
+
+    #region CHOOSE DATA STYLE, One of both has to be uncommented to work (Fully testing)
+
+    #region Data By an Extern ScriptableObject
+    [RequireComponent(typeof(DataContainer))]
+    public partial class PlayerMovement : MonoBehaviour
+    {
+        private DataContainer _dataContainer;
+
+        private GameValues GameData => _dataContainer.GameData;
+        private float MinSpeedToMove => GameData.MinSpeedToMove;
+        private float MaxSpeed => IsSprinting ? GameData.SprintSpeed : GameData.MaxSpeed;
+        private bool CanSprint => GameData.SprintEnabled;
+        private float LinealAcceleration => GameData.LinealAcceleration;
+        private float LinealDeceleration => GameData.LinealDeceleration;
+        private bool MoveByAcceleration => GameData.UseAccelerationMovement;
+
+        partial void GetDataContainer() => _dataContainer = GetComponent<DataContainer>();
+    }
+    #endregion
+
+    #region Data by the same Class
+    //public partial class PlayerMovement : MonoBehaviour
+    //{
+    //    [Header("Player Attributes")]
+    //    [SerializeField] private bool _canSprint = true;
+    //    [SerializeField] private bool _moveByAcceleration = true;
+    //    [SerializeField] private float _minSpeedToMove = 2;
+    //    [SerializeField] private float _maxSpeed = 10;
+    //    [SerializeField] private float _maxSprintSpeed = 15;
+    //    [SerializeField] private float _linealAcceleration = 30;
+    //    [SerializeField] private float _linealDeceleration = 15;
+
+    //    private float MinSpeedToMove => _minSpeedToMove;
+    //    private float MaxSpeed => IsSprinting ? _maxSprintSpeed : _maxSpeed;
+    //    private bool CanSprint => _canSprint;
+    //    private float LinealAcceleration => _linealAcceleration;
+    //    private float LinealDeceleration => _linealDeceleration;
+    //    private bool MoveByAcceleration => _moveByAcceleration;
+    //}
+    #endregion
+
+    #endregion
 }

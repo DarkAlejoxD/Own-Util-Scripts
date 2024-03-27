@@ -19,5 +19,5 @@ implement any way of read input.
 	-	Jump behaviour
 		-	Consider rewrite a new one instead of import of the Mario project
 		-	Different behaviour for First Person/Third Person?
-	-	Import PointnClick from Atka
 	-	¿Import FPS Head movement by Marti Garriga?
+	-	Import Camera for FPS

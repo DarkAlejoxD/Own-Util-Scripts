@@ -1,0 +1,16 @@
+using UnityEngine;
+
+namespace UtilsComplements
+{
+
+    public class #SCRIPTNAME# : MonoBehaviour
+    {
+        private const string _pathToTemplateTemplate = "";
+
+        //[MenuItem(itemName: "Assets/Create/ScriptTemplates/C# New Template", isValidateFunction: false, priority = 22)]
+        public static void CreateScriptFromTemplate_MinigameTemplate()
+        {
+            ProjectWindowUtil.CreateScriptAssetFromTemplateFile(_pathToTemplateTemplate, "#SCRIPTNAME#.cs");
+        }
+    }
+}

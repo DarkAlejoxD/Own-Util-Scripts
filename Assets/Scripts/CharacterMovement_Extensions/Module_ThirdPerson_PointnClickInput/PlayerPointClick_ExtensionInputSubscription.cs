@@ -1,9 +1,20 @@
 ﻿using UnityEngine;
 using InputManagerController;
-using UtilsComplements;
 
 namespace CharacterMovement.ThirdPerson.FreeCamera
 {
+    #region Report
+    //Made by DarkAlejoxD, Camilo Londoño
+
+    //Partial Role: Branch
+    //Current State: PartialEnd
+    //Last checked: {Date}
+    //Last modification: {Date}
+
+    //Direct dependencies of classes if imported file by file:
+    //  -   InputManagerController Folder
+    #endregion
+
     [RequireComponent(typeof(InputManager))]
     public partial class PlayerPointClick : MonoBehaviour
     {

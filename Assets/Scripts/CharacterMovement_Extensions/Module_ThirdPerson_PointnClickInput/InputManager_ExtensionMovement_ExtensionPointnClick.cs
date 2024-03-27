@@ -2,6 +2,24 @@
 
 namespace InputManagerController
 {
+    #region Report
+    //Made by DarkAlejoxD
+
+    //Partial Role: Branch
+    //Last checked: March 2024
+    //Last modification: March 2024
+
+    //Direct dependencies of classes if imported file by file:
+    //  -   Input Manager Controller Folder
+
+    //Commentaries:
+    //  -   Techniocally it can be used with ol Inputs, but there is a comprobation im too lazy to change
+    //      and I dont really know how to sustitute it.
+
+    //TODO: 
+    //  -   Redo the block Inputs for Old Inputs(??
+    #endregion
+
     partial class InputManager : MonoBehaviour
     {
         private partial bool PointClickInput();

@@ -3,6 +3,18 @@ using UnityEngine;
 
 namespace InputManagerController
 {
+    #region Report
+    //Made by DarkAlejoxD
+
+    //Partial Role: Branch
+    //Current State: PartialEn
+    //Last checked: March 2024
+    //Last modification: March 2024
+
+    //Commentaries:
+    //  -   This part of the InputManager makes the function of the CameraMovement
+    #endregion
+
     #region Main
     public partial class InputManager : MonoBehaviour
     {

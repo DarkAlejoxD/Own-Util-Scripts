@@ -4,115 +4,134 @@ using UtilsComplements;
 
 namespace CharacterMovement.ThirdPerson.Attached
 {
-//    public partial class CameraController : MonoBehaviour
-//    {
-//        private enum CameraStates
-//        {
-//            FreeMove, RecolocatingQuick, RecolocatingSlow
-//        }
+    #region Report
+    //Made by DarkAlejoxD
 
-//        [Header("Recolocate Values")]
-//        [SerializeField, Range(0, 1)] private float _smoothToRecolocateQuick = 0.01f;
-//        [SerializeField, Range(0, 1)] private float _smoothToRecolocateSlow = 0.001f;
-//        [Tooltip("How the angle of the camera is equal to the forward of the player and so change the state")]
-//        [SerializeField, Range(0, 1)] private float _dotNearForward = 0.996f;
-//        [SerializeField] private float _timeBeingIdle = 4;
-//        private float _idleControl;
+    //Partial Role: Main
+    //Current State: WIP
+    //Last checked: November 2023
+    //Last modification: March 2024
 
-//        private FSM<CameraStates> _cameraBrain;
+    //Direct dependencies of classes if imported file by file:
+    //  -   Idk
 
-//        #region Private Methods
-//        partial void FSMInit()
-//        {
-//            _cameraBrain = new(CameraStates.FreeMove);
+    //Commentaries:
+    //  -   Technically it worked in SuperMario project, but i didn't tested in this Modulable project
 
-//            _cameraBrain.SetOnStay(CameraStates.FreeMove, () =>
-//            {
-//                if (true)
-//                {
-//                    _idleControl = 0;
-//                }
-//                else
-//                {
-//                    _idleControl += Time.deltaTime;
-//                }
+    //TODO: 
+    //  -   Test and Re do if necessary
+    #endregion
 
-//                if (_idleControl > _timeBeingIdle)
-//                {
-//                    _cameraBrain.ChangeState(CameraStates.RecolocatingSlow);
-//                }
-//            });
 
-//            _cameraBrain.SetOnStay(CameraStates.RecolocatingQuick, () =>
-//            {
-//                RotateAutoUpdate(_smoothToRecolocateQuick);
-//            });
+    //    public partial class CameraController : MonoBehaviour
+    //    {
+    //        private enum CameraStates
+    //        {
+    //            FreeMove, RecolocatingQuick, RecolocatingSlow
+    //        }
 
-//            _cameraBrain.SetOnStay(CameraStates.RecolocatingSlow, () =>
-//            {
-//                RotateAutoUpdate(_smoothToRecolocateSlow);
+    //        [Header("Recolocate Values")]
+    //        [SerializeField, Range(0, 1)] private float _smoothToRecolocateQuick = 0.01f;
+    //        [SerializeField, Range(0, 1)] private float _smoothToRecolocateSlow = 0.001f;
+    //        [Tooltip("How the angle of the camera is equal to the forward of the player and so change the state")]
+    //        [SerializeField, Range(0, 1)] private float _dotNearForward = 0.996f;
+    //        [SerializeField] private float _timeBeingIdle = 4;
+    //        private float _idleControl;
 
-//                if (true)
-//                {
-//                    _cameraBrain.ChangeState(CameraStates.FreeMove);
-//                }
-//            });
-//        }
+    //        private FSM<CameraStates> _cameraBrain;
 
-//        partial void FSMUpdate()
-//        {
-//            _cameraBrain.Update();
-//            DEBUG_ChangeState();
-//        }
+    //        #region Private Methods
+    //        partial void FSMInit()
+    //        {
+    //            _cameraBrain = new(CameraStates.FreeMove);
 
-//        private void RotateCameraTo(Vector3 direction, float smooth = 1)
-//        {
-//            float distance = Vector3.Distance(transform.position, _lookAt.position);
-//            direction.Normalize();
+    //            _cameraBrain.SetOnStay(CameraStates.FreeMove, () =>
+    //            {
+    //                if (true)
+    //                {
+    //                    _idleControl = 0;
+    //                }
+    //                else
+    //                {
+    //                    _idleControl += Time.deltaTime;
+    //                }
 
-//            Vector3 forward = transform.forward;
+    //                if (_idleControl > _timeBeingIdle)
+    //                {
+    //                    _cameraBrain.ChangeState(CameraStates.RecolocatingSlow);
+    //                }
+    //            });
 
-//            Vector3 desiredForward = Vector3.Lerp(forward, direction, smooth);
+    //            _cameraBrain.SetOnStay(CameraStates.RecolocatingQuick, () =>
+    //            {
+    //                RotateAutoUpdate(_smoothToRecolocateQuick);
+    //            });
 
-//            transform.position = _lookAt.position + -desiredForward * distance;
-//            transform.LookAt(_lookAt);
-//        }
+    //            _cameraBrain.SetOnStay(CameraStates.RecolocatingSlow, () =>
+    //            {
+    //                RotateAutoUpdate(_smoothToRecolocateSlow);
 
-//        private void RotateAutoUpdate(float smooth = 1)
-//        {
-//            Vector3 targetForward = _lookAt.forward;
-//            Vector3 forward = transform.forward;
-//            RotateCameraTo(targetForward, smooth);
+    //                if (true)
+    //                {
+    //                    _cameraBrain.ChangeState(CameraStates.FreeMove);
+    //                }
+    //            });
+    //        }
 
-//            float dot = Vector3.Dot(forward, targetForward);
-//            if (dot > _dotNearForward)
-//            {
-//                _cameraBrain.ChangeState(CameraStates.FreeMove);
-//            }
-//        }
+    //        partial void FSMUpdate()
+    //        {
+    //            _cameraBrain.Update();
+    //            DEBUG_ChangeState();
+    //        }
 
-//        public void RecolocateCameraQuick()
-//        {
-//            _cameraBrain.ChangeState(CameraStates.RecolocatingQuick);
-//        }
+    //        private void RotateCameraTo(Vector3 direction, float smooth = 1)
+    //        {
+    //            float distance = Vector3.Distance(transform.position, _lookAt.position);
+    //            direction.Normalize();
 
-//        #endregion
+    //            Vector3 forward = transform.forward;
 
-//        #region DEBUG
-//        private void DEBUG_ChangeState()
-//        {
-//#if UNITY_EDITOR
-//            if (Input.GetKeyDown(KeyCode.M))
-//            {
-//                _cameraBrain.ChangeState(CameraStates.RecolocatingQuick);
-//            }
+    //            Vector3 desiredForward = Vector3.Lerp(forward, direction, smooth);
 
-//            if (Input.GetKeyDown(KeyCode.N))
-//            {
-//                _cameraBrain.ChangeState(CameraStates.RecolocatingSlow);
-//            }
-//#endif
-//        }
-//        #endregion
-//    }
+    //            transform.position = _lookAt.position + -desiredForward * distance;
+    //            transform.LookAt(_lookAt);
+    //        }
+
+    //        private void RotateAutoUpdate(float smooth = 1)
+    //        {
+    //            Vector3 targetForward = _lookAt.forward;
+    //            Vector3 forward = transform.forward;
+    //            RotateCameraTo(targetForward, smooth);
+
+    //            float dot = Vector3.Dot(forward, targetForward);
+    //            if (dot > _dotNearForward)
+    //            {
+    //                _cameraBrain.ChangeState(CameraStates.FreeMove);
+    //            }
+    //        }
+
+    //        public void RecolocateCameraQuick()
+    //        {
+    //            _cameraBrain.ChangeState(CameraStates.RecolocatingQuick);
+    //        }
+
+    //        #endregion
+
+    //        #region DEBUG
+    //        private void DEBUG_ChangeState()
+    //        {
+    //#if UNITY_EDITOR
+    //            if (Input.GetKeyDown(KeyCode.M))
+    //            {
+    //                _cameraBrain.ChangeState(CameraStates.RecolocatingQuick);
+    //            }
+
+    //            if (Input.GetKeyDown(KeyCode.N))
+    //            {
+    //                _cameraBrain.ChangeState(CameraStates.RecolocatingSlow);
+    //            }
+    //#endif
+    //        }
+    //        #endregion
+    //    }
 }

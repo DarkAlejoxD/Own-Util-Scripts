@@ -1,30 +1,46 @@
-using DialogueSystem;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New RepeatOnlyX Condition", menuName = "DialogueSystem/Conditions/new RepeatOnlyX", order = 1)]
-public class DialogueCondition_RepeatOnly : DialogueConditionObject
+namespace DialogueSystem.Conditions
 {
-    [SerializeField] private int _timesToRepeat;
-    private int _repeatCount;
+    #region Report
+    //Made by DarkAlejoxD
 
-    private void OnEnable()
-    {
-        _repeatCount = 0;
-    }
+    //Current State: Archived
+    //Last checked: February 2024
+    //Last modification: February 2024
 
-    public override bool DialogueCondition()
+    //Direct dependencies of classes if imported file by file:
+    //  -   All the DialogueSystem Folder
+
+    //Commentaries:
+    //  -   Helps to create a dialogue that shows once or limited times
+    #endregion
+
+    [CreateAssetMenu(fileName = "New RepeatOnlyX Condition", menuName = "DialogueSystem/Conditions/new RepeatOnlyX", order = 1)]
+    public class DialogueCondition_RepeatOnly : DialogueConditionObject
     {
-        if (CanRepeat())
+        [SerializeField] private int _timesToRepeat;
+        private int _repeatCount;
+
+        private void OnEnable()
         {
-            _repeatCount++;
-            return true;
+            _repeatCount = 0;
         }
 
-        return false;
-    }
+        public override bool DialogueCondition()
+        {
+            if (CanRepeat())
+            {
+                _repeatCount++;
+                return true;
+            }
 
-    private bool CanRepeat()
-    {
-        return _repeatCount < _timesToRepeat;
+            return false;
+        }
+
+        private bool CanRepeat()
+        {
+            return _repeatCount < _timesToRepeat;
+        }
     }
 }

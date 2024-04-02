@@ -1,4 +1,4 @@
-using System.Collections;
+
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -45,68 +45,68 @@ namespace UtilsComplements
             if (!ISingleton<HUD_Alerts>.TryGetInstance(out var options))
                 return;
 
-            if (options._textReference == null)
-                return;
+            //if (options._textReference == null)
+            //    return;
 
-            if (!options._isAppearing)
-                options.StartCoroutine(options.WriteTextCoroutine(text));
+            //if (!options._isAppearing)
+            //    options.StartCoroutine(options.WriteTextCoroutine(text));
 
-            else
-                options._textToAppear.Enqueue(text);
+            //else
+            //    options._textToAppear.Enqueue(text);
         }
 
-        public static void ResetText()
-        {
-            if (!ISingleton<HUD_Alerts>.TryGetInstance(out var options))
-                return;
+        //public static void ResetText()
+        //{
+        //    if (!ISingleton<HUD_Alerts>.TryGetInstance(out var options))
+        //        return;
 
-            if (options._textReference == null)
-                return;
-            options._textToAppear.Clear();
-        }
+        //    if (options._textReference == null)
+        //        return;
+        //    options._textToAppear.Clear();
+        //}
 
-        private void Awake()
-        {
-            Instance.Instantiate();
-            Color color = _textReference.color;
-            color.a = 0;
-            _textReference.color = color;
-            _textToAppear = new();
-            _isAppearing = false;
-        }
+        //private void Awake()
+        //{
+        //    Instance.Instantiate();
+        //    Color color = _textReference.color;
+        //    color.a = 0;
+        //    _textReference.color = color;
+        //    _textToAppear = new();
+        //    _isAppearing = false;
+        //}
         public void Invalidate()
         {
             Destroy(gameObject);
         }
 
-        private IEnumerator WriteTextCoroutine(string text)
-        {
-            _isAppearing = true;
-            _textReference.text = text;
-            Color textColor = _textReference.color;
-            textColor.a = 1;
-            _textReference.color = textColor;
+        //private IEnumerator WriteTextCoroutine(string text)
+        //{
+        //    _isAppearing = true;
+        //    _textReference.text = text;
+        //    Color textColor = _textReference.color;
+        //    textColor.a = 1;
+        //    _textReference.color = textColor;
 
-            yield return new WaitForSeconds(_timeInScreen);
+        //    yield return new WaitForSeconds(_timeInScreen);
 
-            for (float i = 0; i <= _timeDissapear; i += Time.deltaTime)
-            {
-                textColor.a = 1 - i / _timeDissapear;
-                _textReference.color = textColor;
+        //    for (float i = 0; i <= _timeDissapear; i += Time.deltaTime)
+        //    {
+        //        textColor.a = 1 - i / _timeDissapear;
+        //        _textReference.color = textColor;
 
-                yield return new WaitForSeconds(Time.deltaTime);
-            }
-            textColor.a = 0;
-            _textReference.color = textColor;
+        //        yield return new WaitForSeconds(Time.deltaTime);
+        //    }
+        //    textColor.a = 0;
+        //    _textReference.color = textColor;
 
-            _isAppearing = false;
-            //if (_textToAppear.Count <= 0)
-            //else
-            //{
-            //    yield return new WaitForSeconds(1);
-            //    string newText = _textToAppear.Dequeue();
-            //    StartCoroutine(WriteTextCoroutine(newText));
-            //}
-        }  
+        //    _isAppearing = false;
+        //    //if (_textToAppear.Count <= 0)
+        //    //else
+        //    //{
+        //    //    yield return new WaitForSeconds(1);
+        //    //    string newText = _textToAppear.Dequeue();
+        //    //    StartCoroutine(WriteTextCoroutine(newText));
+        //    //}
+        //}  
     }
 }

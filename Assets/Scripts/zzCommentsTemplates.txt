@@ -24,6 +24,7 @@ Report Text
     //  -   PartialWIP: WIP but with partial classes, idk.
     //  -   PartialEnd: Meant to be for the part of the partial part that you should not edit, unless it's necessary.
     //  -   Finished: It's editable and extensible.
+    //  -   Archived: No interest in do it better.
     //Last checked: {Date}
     //Last modification: {Date}
 

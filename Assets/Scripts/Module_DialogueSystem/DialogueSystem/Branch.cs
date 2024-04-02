@@ -5,6 +5,16 @@ using UnityEngine;
 
 namespace DialogueSystem
 {
+    #region Report
+    //Made by DarkAlejoxD, Camilo Londoño
+
+    //Current State: Archived
+    //Last checked: Febuary 2024
+    //Last modification: February 2024
+
+    //Commentaries:
+    //  -   What a branch contains
+    #endregion
     [Serializable]
     public class Branch
     {
@@ -204,7 +214,6 @@ namespace DialogueSystem
                 }
             }
         }
-
         public void CreateNewDialogueNode(DialogueNode node, int index)
         {
             DialogueNodes ??= new List<DialogueNode>();

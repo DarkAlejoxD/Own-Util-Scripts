@@ -1,4 +1,5 @@
 using DialogueSystem;
+using DialogueSystem.Conditions;
 using UnityEngine;
 using UtilsComplements;
 

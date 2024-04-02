@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c3876359d43253478660f125902b248, type: 3}
+  m_Name: DialogueSampleAsset
+  m_EditorClassIdentifier: 
+  DialogueBranch:
+    DialogueNodes:
+    - rid: 2287061780594688000
+    - rid: 2287061780594688001
+    - rid: 2287061780594688002
+    - rid: 2287061780594688004
+    FoldOut: 0
+  NpcIcon: {fileID: 0}
+  NpcName: 
+  references:
+    version: 2
+    RefIds:
+    - rid: 2287061780594688000
+      type: {class: DialogueNode, ns: DialogueSystem, asm: Assembly-CSharp}
+      data:
+        NodeID: 0
+        Text: Hello everyone!!
+        WhoTalks: 1
+        EntityName: Marcus
+    - rid: 2287061780594688001
+      type: {class: DialogueNode, ns: DialogueSystem, asm: Assembly-CSharp}
+      data:
+        NodeID: 1
+        Text: I hope you enjoy our meeting today!
+        WhoTalks: 1
+        EntityName: Marcus
+    - rid: 2287061780594688002
+      type: {class: DialogueNode, ns: DialogueSystem, asm: Assembly-CSharp}
+      data:
+        NodeID: 2
+        Text: Have Fun!!
+        WhoTalks: 1
+        EntityName: Marcus
+    - rid: 2287061780594688004
+      type: {class: EndNode, ns: DialogueSystem, asm: Assembly-CSharp}
+      data:
+        NodeID: 3
+        Text: YAY!!
+        WhoTalks: 0
+        EntityName: Player

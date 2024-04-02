@@ -1,41 +1,45 @@
 using System.Collections;
 using UnityEngine;
-using UtilsComplements;
 
 namespace DialogueSystem
 {
-
-    [CreateAssetMenu(fileName = "New Dialogue Condition", menuName = "DialogueSystem/Conditions/DEBUG Condition")]
-    public class DialogueConditionObject : ScriptableObject
+    namespace Conditions
     {
-        [SerializeField, HideInInspector] private bool DEBUG_testCondition;
-        public virtual bool DialogueCondition()
+        [CreateAssetMenu(fileName = "New Dialogue Condition", menuName = "DialogueSystem/Conditions/DEBUG Condition")]
+        public class DialogueConditionObject : ScriptableObject
         {
-            return DEBUG_testCondition;
+            [SerializeField, HideInInspector] private bool DEBUG_testCondition;
+            public virtual bool DialogueCondition()
+            {
+                return DEBUG_testCondition;
+            }
         }
     }
 
-    public abstract class DialogueEndActionObject : ScriptableObject
+    namespace EndAction
     {
-        private const float TIME_DEALYED = 1;
-        public void OnDialogueEnd()
+        public abstract class DialogueEndActionObject : ScriptableObject
         {
-            //if (ISingleton<GameManager>.TryGetInstance(out var manager))
-            //{
-            //    manager.StartCoroutine(DialogueEndCoroutine());
-            //}
-            //else
-            //{
-            //}
+            private const float TIME_DEALYED = 1;
+            public void OnDialogueEnd()
+            {
+                //if (ISingleton<GameManager>.TryGetInstance(out var manager))
+                //{
+                //    manager.StartCoroutine(DialogueEndCoroutine());
+                //}
+                //else
+                //{
+                //}
                 OnDialogueEndDelayed();
-        }
+            }
 
-        public abstract void OnDialogueEndDelayed();
+            public abstract void OnDialogueEndDelayed();
 
-        private IEnumerator DialogueEndCoroutine()
-        {
-            yield return new WaitForSeconds(TIME_DEALYED);
-            OnDialogueEndDelayed();
+            private IEnumerator DialogueEndCoroutine()
+            {
+                yield return new WaitForSeconds(TIME_DEALYED);
+                OnDialogueEndDelayed();
+            }
         }
     }
 }

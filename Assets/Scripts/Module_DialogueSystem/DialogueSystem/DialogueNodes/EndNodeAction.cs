@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DialogueSystem.EndAction;
+using System;
 using UnityEngine;
 
 namespace DialogueSystem

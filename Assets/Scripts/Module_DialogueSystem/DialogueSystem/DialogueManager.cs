@@ -39,7 +39,7 @@ namespace DialogueSystem
         [SerializeField] private DialogueObject DEBUG_dialogueObject;
         [SerializeField] private TMP_Text DEBUG_textIDCanvas;
         [SerializeField, Min(0.1f)] private float DEBUG_cooldownToTest = 1;
-        private bool DEBUG_debug = false;
+        [SerializeField] private bool DEBUG_debug = false;
 
         private Action _onDialogueClosed;
         public ISingleton<DialogueManager> Instance => this;
@@ -74,6 +74,9 @@ namespace DialogueSystem
                 SetNewStory(DEBUG_dialogueObject);
                 StartCoroutine(DEBUG_CooldownCoroutine());
             }
+
+            if (Input.GetKeyDown(KeyCode.H) && DEBUG_debug)
+                DialogueInput();
 #endif
         }
 

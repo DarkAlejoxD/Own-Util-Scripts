@@ -29,22 +29,27 @@ namespace UtilsComplements
     /// </summary>
     public class HUD_Alerts : MonoBehaviour, ISingleton<HUD_Alerts>
     {
-        [SerializeField] private TMP_Text _textReference;
+        [Header("References")]
+        [SerializeField] private RectTransform _container;
+        [SerializeField] private GameObject _textPrefab;
+        private Pool<TMP_Text> _textPool;
+
+        [Header("Time In Screen")]
         [SerializeField, Min(0.1f)] private float _timeInScreen = 0.1f;
         [SerializeField, Min(0.1f)] private float _timeDissapear = 0.1f;
-        private bool _isAppearing;
 
         public ISingleton<HUD_Alerts> Instance => this;
         public HUD_Alerts Value => this;
 
-
+        #region Static Methods
         public static void WriteText(string text)
         {
             Debug.Log(text);
+
             if (!ISingleton<HUD_Alerts>.TryGetInstance(out var options))
                 return;
 
-            if (options._textReference == null)
+            if (options._container == null)
                 return;
 
             options.StartCoroutine(options.WriteTextCoroutine(text));
@@ -55,42 +60,52 @@ namespace UtilsComplements
             if (!ISingleton<HUD_Alerts>.TryGetInstance(out var options))
                 return;
 
-            if (options._textReference == null)
+            if (options._container == null)
                 return;
 
         }
+        #endregion
 
+        #region UnityLogic
         private void Awake()
         {
             Instance.Instantiate();
-            Color color = _textReference.color;
-            color.a = 0;
-            _textReference.color = color;
-            _isAppearing = false;
+
+            _textPool = new(_textPrefab, defaultObjects: 5,
+                                         maxObjects: 5, 
+                                         nameOfFolder: "TextPool", 
+                                         catchObjectFromActiveList: true,
+                                         parent: transform.parent);
         }
+        #endregion
+
+        #region Public Methods
         public void Invalidate()
         {
             Destroy(gameObject);
         }
+        #endregion
 
-        private IEnumerator WriteTextCoroutine(string text)
-        {
-            _textReference.text = text;
-            Color textColor = _textReference.color;
+        #region Private Methods
+        private IEnumerator WriteTextCoroutine(TMP_Text textReference, string text)
+        {            
+            textReference.text = text;
+            Color textColor = textReference.color;
             textColor.a = 1;
-            _textReference.color = textColor;
+            textReference.color = textColor;
 
             yield return new WaitForSeconds(_timeInScreen);
 
             for (float i = 0; i <= _timeDissapear; i += Time.deltaTime)
             {
                 textColor.a = 1 - i / _timeDissapear;
-                _textReference.color = textColor;
+                textReference.color = textColor;
 
                 yield return new WaitForSeconds(Time.deltaTime);
             }
             textColor.a = 0;
-            _textReference.color = textColor;
+            textReference.color = textColor;
         }
+        #endregion
     }
 }

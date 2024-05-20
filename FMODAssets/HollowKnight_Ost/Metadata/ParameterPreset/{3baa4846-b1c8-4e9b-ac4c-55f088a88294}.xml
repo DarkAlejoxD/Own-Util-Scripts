@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{3baa4846-b1c8-4e9b-ac4c-55f088a88294}">
+		<property name="name">
+			<value>Size of the enemy (Small-Big)</value>
+		</property>
+		<relationship name="folder">
+			<destination>{1850f11d-6e15-4097-94e4-f968e79dc033}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{de3b5c04-9a34-4f56-a93f-d2fbdbbe68b8}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{de3b5c04-9a34-4f56-a93f-d2fbdbbe68b8}">
+		<property name="maximum">
+			<value>50</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

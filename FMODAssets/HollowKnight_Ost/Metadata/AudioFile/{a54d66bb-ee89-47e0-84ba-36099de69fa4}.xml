@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{a54d66bb-ee89-47e0-84ba-36099de69fa4}">
+		<property name="assetPath">
+			<value>NPCs/Galope 3.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.57469387755102042</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b9c6215f-c2f0-4396-afca-b34842e94bb2}</destination>
+		</relationship>
+	</object>
+</objects>

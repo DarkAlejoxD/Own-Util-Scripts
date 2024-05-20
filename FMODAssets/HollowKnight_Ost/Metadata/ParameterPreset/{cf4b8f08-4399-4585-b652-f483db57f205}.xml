@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{cf4b8f08-4399-4585-b652-f483db57f205}">
+		<property name="name">
+			<value>Zombified</value>
+		</property>
+		<relationship name="folder">
+			<destination>{1850f11d-6e15-4097-94e4-f968e79dc033}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{dad94923-b8aa-4809-953e-91d9dd6d2ef1}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{dad94923-b8aa-4809-953e-91d9dd6d2ef1}">
+		<property name="maximum">
+			<value>0.01</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

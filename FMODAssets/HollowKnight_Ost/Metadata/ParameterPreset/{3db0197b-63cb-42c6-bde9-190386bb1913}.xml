@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{3db0197b-63cb-42c6-bde9-190386bb1913}">
+		<property name="name">
+			<value>Dash charge</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ac30e392-e343-47e0-a9c6-3cee52824c5d}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{a6d1d73b-7cf7-491d-b1f7-bd2a9d13955b}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{a6d1d73b-7cf7-491d-b1f7-bd2a9d13955b}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

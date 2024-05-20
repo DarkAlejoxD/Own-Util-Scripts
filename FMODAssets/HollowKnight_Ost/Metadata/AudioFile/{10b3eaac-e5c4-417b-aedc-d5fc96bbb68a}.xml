@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{10b3eaac-e5c4-417b-aedc-d5fc96bbb68a}">
+		<property name="assetPath">
+			<value>Ambience/Other/Effervecent_sound.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>149.83836734693878</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b9c6215f-c2f0-4396-afca-b34842e94bb2}</destination>
+		</relationship>
+	</object>
+</objects>

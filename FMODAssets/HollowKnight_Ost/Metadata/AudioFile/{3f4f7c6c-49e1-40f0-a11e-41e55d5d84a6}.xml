@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{3f4f7c6c-49e1-40f0-a11e-41e55d5d84a6}">
+		<property name="assetPath">
+			<value>Player/mud_splash.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.4053333333333335</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b9c6215f-c2f0-4396-afca-b34842e94bb2}</destination>
+		</relationship>
+	</object>
+</objects>

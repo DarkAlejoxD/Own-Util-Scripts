@@ -1,5 +1,775 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8824635773278780352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/music_boss/Danger Level
+  m_EditorClassIdentifier: 
+  Name: Danger Level
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 576133280
+    data2: 498621356
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-8711590198888982746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Enemy_Magic
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Enemy_Magic
+  Guid:
+    Data1: -509866398
+    Data2: 1336233393
+    Data3: -1705458505
+    Data4: 777530875
+  Banks:
+  - {fileID: 7734978453544108581}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1050
+--- !u!114 &-7902638289183613705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/NPCs.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/HollowKnight_Ost/Build/Desktop/NPCs.bank
+  Name: NPCs
+  StudioPath: bank:/NPCs
+  lastModified: 638518289458568485
+  FileSizes:
+  - Name: Desktop
+    Value: 432000
+  Exists: 1
+--- !u!114 &-7810512606147938509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/music_fight/End Of Fight
+  m_EditorClassIdentifier: 
+  Name: End Of Fight
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 457452445
+    data2: 3373509398
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-7674390516208694901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/music_fight
+  m_EditorClassIdentifier: 
+  Path: event:/Music/music_fight
+  Guid:
+    Data1: -1857016525
+    Data2: 1189879700
+    Data3: -785171821
+    Data4: -1420887892
+  Banks:
+  - {fileID: -6556533718702662314}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 801765025495593026}
+  - {fileID: -7810512606147938509}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 166772
+--- !u!114 &-6893259065657212699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Attack/Hits trap
+  m_EditorClassIdentifier: 
+  Name: Hits trap
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 736525262
+    data2: 2030279188
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-6604802212790747183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Land/mud
+  m_EditorClassIdentifier: 
+  Name: mud
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3156664208
+    data2: 3483220501
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-6591050218121150409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Dash/Dash charge
+  m_EditorClassIdentifier: 
+  Name: Dash charge
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2716661332
+    data2: 1982367537
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-6556533718702662314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/HollowKnight_Ost/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638518289454429811
+  FileSizes:
+  - Name: Desktop
+    Value: 13950720
+  Exists: 1
+--- !u!114 &-6500614792411200857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/music_boss/End Of Fight
+  m_EditorClassIdentifier: 
+  Name: End Of Fight
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 457452445
+    data2: 3373509398
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-6265320339635668304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPCs/npc_risa
+  m_EditorClassIdentifier: 
+  Path: event:/NPCs/npc_risa
+  Guid:
+    Data1: -503006076
+    Data2: 1224054737
+    Data3: 1915291546
+    Data4: 1316241772
+  Banks:
+  - {fileID: -7902638289183613705}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3000
+--- !u!114 &-6117011509537706201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/HollowKnight_Ost/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638518289374362090
+  FileSizes:
+  - Name: Desktop
+    Value: 3454
+  Exists: 1
+--- !u!114 &-6110953062904999670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Enemy_Idle/Zombified
+  m_EditorClassIdentifier: 
+  Name: Zombified
+  StudioPath: 
+  Min: 0
+  Max: 0.01
+  Default: 0
+  ID:
+    data1: 3178269198
+    data2: 2177383278
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-5487371158198520577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPCs/npc_surprise
+  m_EditorClassIdentifier: 
+  Path: event:/NPCs/npc_surprise
+  Guid:
+    Data1: -998488702
+    Data2: 1202083002
+    Data3: -282487149
+    Data4: -1389075832
+  Banks:
+  - {fileID: -7902638289183613705}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1281
+--- !u!114 &-4929767309663015095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Greenpath exploration
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Greenpath exploration
+  Guid:
+    Data1: 1606496816
+    Data2: 1191901610
+    Data3: 330831756
+    Data4: 476101402
+  Banks:
+  - {fileID: -6556533718702662314}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -4408539125975305186}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 310620
+--- !u!114 &-4830036354220476821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Step
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Step
+  Guid:
+    Data1: 1462406830
+    Data2: 1223737179
+    Data3: -1885394005
+    Data4: -110876071
+  Banks:
+  - {fileID: 7734978453544108581}
+  - {fileID: -4069978537813694684}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 4269776260077171862}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 400
+--- !u!114 &-4749941536777419553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Attack/Attack hits
+  m_EditorClassIdentifier: 
+  Name: Attack hits
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 76535155
+    data2: 1937717799
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-4460648793695553398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Enemy_Spit/Size of the enemy (Small-Big)
+  m_EditorClassIdentifier: 
+  Name: Size of the enemy (Small-Big)
+  StudioPath: 
+  Min: 0
+  Max: 50
+  Default: 0
+  ID:
+    data1: 884999290
+    data2: 15636034
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-4408539125975305186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Greenpath exploration/Danger Level
+  m_EditorClassIdentifier: 
+  Name: Danger Level
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 576133280
+    data2: 498621356
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-4069978537813694684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Player.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/HollowKnight_Ost/Build/Desktop/Player.bank
+  Name: Player
+  StudioPath: bank:/Player
+  lastModified: 638518289464474296
+  FileSizes:
+  - Name: Desktop
+    Value: 332896
+  Exists: 1
+--- !u!114 &-3923286532161572780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience_CityOfTears/Indoor
+  m_EditorClassIdentifier: 
+  Name: Indoor
+  StudioPath: 
+  Min: 0
+  Max: 0.01
+  Default: 0
+  ID:
+    data1: 709075822
+    data2: 3869602686
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-2876192837427571261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Jump
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Jump
+  Guid:
+    Data1: -889723605
+    Data2: 1237369528
+    Data3: -164918124
+    Data4: 2025872239
+  Banks:
+  - {fileID: -4069978537813694684}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -2227273225114102815}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 600
+--- !u!114 &-2812471828085775195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience_WaterDrop/Hit Water
+  m_EditorClassIdentifier: 
+  Name: Hit Water
+  StudioPath: 
+  Min: 0
+  Max: 0.01
+  Default: 0
+  ID:
+    data1: 1901771816
+    data2: 3901082075
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-2227273225114102815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Jump/Second jump
+  m_EditorClassIdentifier: 
+  Name: Second jump
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973259143
+    data2: 1614562528
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-1216110995883755501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPCs/npc_tararear
+  m_EditorClassIdentifier: 
+  Path: event:/NPCs/npc_tararear
+  Guid:
+    Data1: -207420940
+    Data2: 1266556831
+    Data3: -1649141367
+    Data4: -1138009332
+  Banks:
+  - {fileID: -7902638289183613705}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5875
+--- !u!114 &-1138274676872812195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/GetHurt/Player life
+  m_EditorClassIdentifier: 
+  Name: Player life
+  StudioPath: 
+  Min: 0
+  Max: 100
+  Default: 0
+  ID:
+    data1: 290471742
+    data2: 2274558052
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-1134990605958037839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Land/water
+  m_EditorClassIdentifier: 
+  Name: water
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2058577314
+    data2: 3731515329
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-804247327659374722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience_CityOfTears/Strong Rain
+  m_EditorClassIdentifier: 
+  Name: Strong Rain
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 34305938
+    data2: 2273261401
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-740184240257921495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Enemy_Attack
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Enemy_Attack
+  Guid:
+    Data1: -365184622
+    Data2: 1270729576
+    Data3: -1012745794
+    Data4: 524766940
+  Banks:
+  - {fileID: 7734978453544108581}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 7207963591861714785}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1171
+--- !u!114 &-737868752025824060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPCs/npc_dormir
+  m_EditorClassIdentifier: 
+  Path: event:/NPCs/npc_dormir
+  Guid:
+    Data1: 1778689434
+    Data2: 1318682842
+    Data3: 655785353
+    Data4: 2091307843
+  Banks:
+  - {fileID: -7902638289183613705}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5000
+--- !u!114 &-635533826437399709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Attack
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Attack
+  Guid:
+    Data1: 242693156
+    Data2: 1204705258
+    Data3: -485186918
+    Data4: 1772254088
+  Banks:
+  - {fileID: -4069978537813694684}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -6893259065657212699}
+  - {fileID: -4749941536777419553}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,10 +782,995 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
-  EditorBanks: []
-  EditorEvents: []
+  EditorBanks:
+  - {fileID: -6117011509537706201}
+  - {fileID: 2347128491030186739}
+  - {fileID: 7734978453544108581}
+  - {fileID: 3358811710465906697}
+  - {fileID: -6556533718702662314}
+  - {fileID: -7902638289183613705}
+  - {fileID: -4069978537813694684}
+  EditorEvents:
+  - {fileID: 8997579456933596746}
+  - {fileID: 8845053509143974266}
+  - {fileID: 8083179961242037234}
+  - {fileID: 6978240240266041936}
+  - {fileID: 4207281608103231478}
+  - {fileID: 8641690386791658359}
+  - {fileID: 7272462555782735537}
+  - {fileID: 7582119663889459236}
+  - {fileID: -8711590198888982746}
+  - {fileID: -740184240257921495}
+  - {fileID: 4073615144346657954}
+  - {fileID: 6049940341588920804}
+  - {fileID: -4830036354220476821}
+  - {fileID: 8149171853859393401}
+  - {fileID: 4833956436264644281}
+  - {fileID: 9017193960985128831}
+  - {fileID: 9001898950266289113}
+  - {fileID: -4929767309663015095}
+  - {fileID: -7674390516208694901}
+  - {fileID: 2140044853700196126}
+  - {fileID: 636071689474896159}
+  - {fileID: 7285751171457355717}
+  - {fileID: -5487371158198520577}
+  - {fileID: -6265320339635668304}
+  - {fileID: -737868752025824060}
+  - {fileID: 1181948715922120379}
+  - {fileID: 3337021575705607659}
+  - {fileID: -1216110995883755501}
+  - {fileID: -635533826437399709}
+  - {fileID: 8335352949170950827}
+  - {fileID: -2876192837427571261}
+  - {fileID: 599288131915969178}
+  - {fileID: 5596243015068060378}
+  - {fileID: 661454560423086504}
+  - {fileID: 4422100536233369742}
   EditorParameters: []
-  MasterBanks: []
-  StringsBanks: []
-  cacheTime: 0
+  MasterBanks:
+  - {fileID: 3358811710465906697}
+  StringsBanks:
+  - {fileID: -6117011509537706201}
+  cacheTime: 638518289464474296
   cacheVersion: 131609
+--- !u!114 &300588744210644403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience_ForgottenRoads/Infected Roads
+  m_EditorClassIdentifier: 
+  Name: Infected Roads
+  StudioPath: 
+  Min: 0
+  Max: 0.011
+  Default: 0
+  ID:
+    data1: 1704366983
+    data2: 2135284135
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &599288131915969178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/GetHurt
+  m_EditorClassIdentifier: 
+  Path: event:/Player/GetHurt
+  Guid:
+    Data1: -202550722
+    Data2: 1201330134
+    Data3: 706424713
+    Data4: 115812328
+  Banks:
+  - {fileID: -4069978537813694684}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 1347987354941378265}
+  - {fileID: -1138274676872812195}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 519
+--- !u!114 &636071689474896159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPCs/npc_estocada
+  m_EditorClassIdentifier: 
+  Path: event:/NPCs/npc_estocada
+  Guid:
+    Data1: -559314641
+    Data2: 1282105416
+    Data3: 522858629
+    Data4: 164596499
+  Banks:
+  - {fileID: -7902638289183613705}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2690
+--- !u!114 &661454560423086504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Dash
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Dash
+  Guid:
+    Data1: 2066745727
+    Data2: 1136026665
+    Data3: -1359459929
+    Data4: 108297953
+  Banks:
+  - {fileID: -4069978537813694684}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -6591050218121150409}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 518
+--- !u!114 &801765025495593026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/music_fight/Danger Level
+  m_EditorClassIdentifier: 
+  Name: Danger Level
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 576133280
+    data2: 498621356
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &1181948715922120379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPCs/npc_hablar
+  m_EditorClassIdentifier: 
+  Path: event:/NPCs/npc_hablar
+  Guid:
+    Data1: 388001968
+    Data2: 1281326139
+    Data3: -1565715828
+    Data4: 578751096
+  Banks:
+  - {fileID: -7902638289183613705}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1500
+--- !u!114 &1347987354941378265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/GetHurt/Double hit
+  m_EditorClassIdentifier: 
+  Name: Double hit
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1175857135
+    data2: 2476551728
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &1951451419731361198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Enemy_Death/Size of the enemy (Small-Big)
+  m_EditorClassIdentifier: 
+  Name: Size of the enemy (Small-Big)
+  StudioPath: 
+  Min: 0
+  Max: 50
+  Default: 0
+  ID:
+    data1: 884999290
+    data2: 15636034
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &2140044853700196126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/music_boss
+  m_EditorClassIdentifier: 
+  Path: event:/Music/music_boss
+  Guid:
+    Data1: 1836964290
+    Data2: 1191666560
+    Data3: -2079187793
+    Data4: -1318788363
+  Banks:
+  - {fileID: -6556533718702662314}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -6500614792411200857}
+  - {fileID: -8824635773278780352}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 105912
+--- !u!114 &2347128491030186739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/HollowKnight_Ost/Build/Desktop/Ambience.bank
+  Name: Ambience
+  StudioPath: bank:/Ambience
+  lastModified: 638518289367569347
+  FileSizes:
+  - Name: Desktop
+    Value: 3647680
+  Exists: 1
+--- !u!114 &3337021575705607659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPCs/npc_dash
+  m_EditorClassIdentifier: 
+  Path: event:/NPCs/npc_dash
+  Guid:
+    Data1: 637286869
+    Data2: 1316861805
+    Data3: -1121005403
+    Data4: 2036977936
+  Banks:
+  - {fileID: -7902638289183613705}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3000
+--- !u!114 &3358811710465906697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/HollowKnight_Ost/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638518289374311907
+  FileSizes:
+  - Name: Desktop
+    Value: 1036
+  Exists: 1
+--- !u!114 &4073615144346657954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Enemy_Explosion
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Enemy_Explosion
+  Guid:
+    Data1: 1846829716
+    Data2: 1140368068
+    Data3: 1146293143
+    Data4: 77220649
+  Banks:
+  - {fileID: 7734978453544108581}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5000
+--- !u!114 &4207281608103231478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Ambience_CityOfTears
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Ambience_CityOfTears
+  Guid:
+    Data1: -169689970
+    Data2: 1313843149
+    Data3: 55129504
+    Data4: -1870429365
+  Banks:
+  - {fileID: 2347128491030186739}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -3923286532161572780}
+  - {fileID: -804247327659374722}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 37500
+--- !u!114 &4269776260077171862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Step/Stepping grass
+  m_EditorClassIdentifier: 
+  Name: Stepping grass
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1304074480
+    data2: 930836852
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &4422100536233369742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Land
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Land
+  Guid:
+    Data1: 1844384954
+    Data2: 1316865539
+    Data3: 2083192984
+    Data4: 1327254892
+  Banks:
+  - {fileID: -4069978537813694684}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -1134990605958037839}
+  - {fileID: 8783363504215506115}
+  - {fileID: -6604802212790747183}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 700
+--- !u!114 &4833956436264644281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Enemy_Death
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Enemy_Death
+  Guid:
+    Data1: -1390811954
+    Data2: 1312104787
+    Data3: 1570453396
+    Data4: -1867141646
+  Banks:
+  - {fileID: 7734978453544108581}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 1951451419731361198}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3625
+--- !u!114 &5557371448361331655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Enemy_Crawlid Moving/Stepping grass
+  m_EditorClassIdentifier: 
+  Name: Stepping grass
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1304074480
+    data2: 930836852
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &5596243015068060378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/DeepDive
+  m_EditorClassIdentifier: 
+  Path: event:/Player/DeepDive
+  Guid:
+    Data1: -1902558599
+    Data2: 1312232396
+    Data3: -411003459
+    Data4: 1454738166
+  Banks:
+  - {fileID: -4069978537813694684}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 7735529536182429685}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1007
+--- !u!114 &6049940341588920804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Enemy_Alert
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Enemy_Alert
+  Guid:
+    Data1: 161722774
+    Data2: 1240974125
+    Data3: 958879624
+    Data4: 1445818238
+  Banks:
+  - {fileID: 7734978453544108581}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1281
+--- !u!114 &6978240240266041936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Ambience_Dirtmouth
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Ambience_Dirtmouth
+  Guid:
+    Data1: -656449439
+    Data2: 1098658293
+    Data3: 190614679
+    Data4: -241687855
+  Banks:
+  - {fileID: 2347128491030186739}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 14777
+--- !u!114 &7207963591861714785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Enemy_Attack/Attack Hits Player
+  m_EditorClassIdentifier: 
+  Name: Attack Hits Player
+  StudioPath: 
+  Min: 0
+  Max: 0.01
+  Default: 0
+  ID:
+    data1: 1911742028
+    data2: 2655719383
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &7272462555782735537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Ambience_GrassTouch
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Ambience_GrassTouch
+  Guid:
+    Data1: -1606313738
+    Data2: 1087938941
+    Data3: -342064737
+    Data4: 369244055
+  Banks:
+  - {fileID: 2347128491030186739}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0.79999995
+  MaxDistance: 4
+  Length: 0
+--- !u!114 &7285751171457355717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPCs/npc_galope
+  m_EditorClassIdentifier: 
+  Path: event:/NPCs/npc_galope
+  Guid:
+    Data1: -677627276
+    Data2: 1137946643
+    Data3: -997788231
+    Data4: -1175856186
+  Banks:
+  - {fileID: -7902638289183613705}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
+--- !u!114 &7582119663889459236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Ambience_Waterfall
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Ambience_Waterfall
+  Guid:
+    Data1: 753281015
+    Data2: 1121690796
+    Data3: 442430098
+    Data4: 1987491650
+  Banks:
+  - {fileID: 2347128491030186739}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0.85999995
+  MaxDistance: 15
+  Length: 30096
+--- !u!114 &7734978453544108581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Enemies.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/HollowKnight_Ost/Build/Desktop/Enemies.bank
+  Name: Enemies
+  StudioPath: bank:/Enemies
+  lastModified: 638518289374205666
+  FileSizes:
+  - Name: Desktop
+    Value: 946208
+  Exists: 1
+--- !u!114 &7735529536182429685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/DeepDive/Attack hits
+  m_EditorClassIdentifier: 
+  Name: Attack hits
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 76535155
+    data2: 1937717799
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &8083179961242037234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Ambience_GreenPath
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Ambience_GreenPath
+  Guid:
+    Data1: 62227533
+    Data2: 1307249228
+    Data3: 2023390899
+    Data4: -1706256346
+  Banks:
+  - {fileID: 2347128491030186739}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8786
+--- !u!114 &8149171853859393401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Enemy_Crawlid Moving
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Enemy_Crawlid Moving
+  Guid:
+    Data1: 758289091
+    Data2: 1250104297
+    Data3: -582631502
+    Data4: 1169457551
+  Banks:
+  - {fileID: 7734978453544108581}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 5557371448361331655}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 14521
+--- !u!114 &8335352949170950827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Death
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Death
+  Guid:
+    Data1: -876718556
+    Data2: 1321701413
+    Data3: -743373891
+    Data4: 150128544
+  Banks:
+  - {fileID: -4069978537813694684}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6600
+--- !u!114 &8641690386791658359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Ambience_WaterDrop
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Ambience_WaterDrop
+  Guid:
+    Data1: 2056088228
+    Data2: 1238249147
+    Data3: 635287478
+    Data4: 1152208687
+  Banks:
+  - {fileID: 2347128491030186739}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -2812471828085775195}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1925
+--- !u!114 &8783363504215506115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Land/Stone
+  m_EditorClassIdentifier: 
+  Name: Stone
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1218832340
+    data2: 4287239103
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &8845053509143974266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Ambience_AcidLiquid
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Ambience_AcidLiquid
+  Guid:
+    Data1: -977795515
+    Data2: 1127268041
+    Data3: 924458889
+    Data4: -746972204
+  Banks:
+  - {fileID: 2347128491030186739}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 30000
+--- !u!114 &8997579456933596746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Ambience_ForgottenRoads
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Ambience_ForgottenRoads
+  Guid:
+    Data1: 947477285
+    Data2: 1174491787
+    Data3: -1802590793
+    Data4: 698669304
+  Banks:
+  - {fileID: 2347128491030186739}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 300588744210644403}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 14777
+--- !u!114 &9001898950266289113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Enemy_Idle
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Enemy_Idle
+  Guid:
+    Data1: 1356953060
+    Data2: 1191714661
+    Data3: 1003990430
+    Data4: 2116759331
+  Banks:
+  - {fileID: 7734978453544108581}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -6110953062904999670}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8856
+--- !u!114 &9017193960985128831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Enemy_Spit
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Enemy_Spit
+  Guid:
+    Data1: -383812389
+    Data2: 1176018815
+    Data3: -518042198
+    Data4: 254356470
+  Banks:
+  - {fileID: 7734978453544108581}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -4460648793695553398}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 940

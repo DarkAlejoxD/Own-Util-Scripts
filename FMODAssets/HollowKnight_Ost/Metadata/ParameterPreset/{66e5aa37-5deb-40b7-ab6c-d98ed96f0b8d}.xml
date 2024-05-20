@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{66e5aa37-5deb-40b7-ab6c-d98ed96f0b8d}">
+		<property name="name">
+			<value>Hits trap</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ac30e392-e343-47e0-a9c6-3cee52824c5d}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{3247962c-cef4-4f05-bc4c-dd7c8a50a1f9}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{3247962c-cef4-4f05-bc4c-dd7c8a50a1f9}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

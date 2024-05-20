@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{1c9e4877-f287-4746-b30f-90bfdbfb267d}">
+		<property name="name">
+			<value>Contrapunto</value>
+		</property>
+		<relationship name="folder">
+			<destination>{1f722097-5b1f-4c02-93a9-b3af64c082d8}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{a6546104-7cf4-4fe9-b6b0-b159498a3d5e}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{a6546104-7cf4-4fe9-b6b0-b159498a3d5e}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

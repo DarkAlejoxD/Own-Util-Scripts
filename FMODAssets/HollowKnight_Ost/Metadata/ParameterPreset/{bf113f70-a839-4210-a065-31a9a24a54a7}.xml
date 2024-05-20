@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{bf113f70-a839-4210-a065-31a9a24a54a7}">
+		<property name="name">
+			<value>Infected Roads</value>
+		</property>
+		<relationship name="folder">
+			<destination>{101e98db-59fd-4c7b-959b-e37a3473d3cb}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{b5bd53a9-99a8-4074-988b-1f1c2ee0f709}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{b5bd53a9-99a8-4074-988b-1f1c2ee0f709}">
+		<property name="maximum">
+			<value>0.010999999999999999</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

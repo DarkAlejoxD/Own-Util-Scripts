@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{55d03e6e-21d3-4530-9bba-15566179721b}">
+		<property name="name">
+			<value>Second jump</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ac30e392-e343-47e0-a9c6-3cee52824c5d}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{0281f57a-54a2-4f8c-ba31-9453978ed035}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{0281f57a-54a2-4f8c-ba31-9453978ed035}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

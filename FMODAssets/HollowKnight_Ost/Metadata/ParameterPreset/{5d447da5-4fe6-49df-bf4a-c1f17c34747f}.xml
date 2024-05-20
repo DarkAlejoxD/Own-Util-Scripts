@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{5d447da5-4fe6-49df-bf4a-c1f17c34747f}">
+		<property name="name">
+			<value>Double hit</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ac30e392-e343-47e0-a9c6-3cee52824c5d}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{09ce5321-2caf-47c8-802e-9601acfefd43}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{09ce5321-2caf-47c8-802e-9601acfefd43}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

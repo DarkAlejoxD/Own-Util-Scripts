@@ -52,7 +52,7 @@ namespace UtilsComplements
             if (options._container == null)
                 return;
 
-            options.StartCoroutine(options.WriteTextCoroutine(text));
+            //options.StartCoroutine(options.WriteTextCoroutine(text));
         }
 
         public static void ResetText()
